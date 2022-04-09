@@ -8,10 +8,10 @@ import TheCovidUpdatesVue from '../page-cards/main/TheCovidUpdates.vue';
 
 <template>
   <main>
+    <TheDigosSummaryCovidVue />
     <TheDigosSummaryVax />
     <TheDigosAlertLevelBoard />
     <TheHealthAndWellbeing />
-    <TheDigosSummaryCovidVue />
     <TheCovidUpdatesVue />
   </main>
 </template>

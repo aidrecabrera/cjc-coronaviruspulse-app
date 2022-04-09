@@ -7,20 +7,24 @@ const digosTotalVaccines = 80918;
 </script>
 
 <template>
-  <div>
-    <h1>COVID-19 Vaccination Overview</h1>
-    <p>
-      {{ vaccinationPercentage }}% of the Philippine population has received at
-      least one dose of a COVID-19 vaccine. {{ individualDoses }} million doses
-      have been administered nationally, and {{ dailyDoses }} are now
-      administered each day. Meanwhile, {{ digosVaccinationPercentage }}% of the
-      Digoseño population in Digos City has received at least one dose of
-      COVID-19 vaccine, and a total of {{ 80918 }} doses were administered.
-    </p>
-  </div>
-  <div class="dashboard">
-    <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
-  </div>
+  <main class="bg-white text-black mx-auto py-10 items-center justify-between">
+    <div class="container mx-auto flex-wrap">
+      <div>
+        <h1 class="font-bold text-5xl py-3">COVID-19 Vaccination Overview</h1>
+        <p>
+          {{ vaccinationPercentage }}% of the Philippine population has received at
+          least one dose of a COVID-19 vaccine. {{ individualDoses }} million doses
+          have been administered nationally, and {{ dailyDoses }} are now
+          administered each day. Meanwhile, {{ digosVaccinationPercentage }}% of the
+          Digoseño population in Digos City has received at least one dose of
+          COVID-19 vaccine, and a total of {{ 80918 }} doses were administered.
+        </p>
+      </div>
+      <div class="pt-5">
+        <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
+      </div>
+    </div>
+  </main>
 </template>
 
 <style scoped>
