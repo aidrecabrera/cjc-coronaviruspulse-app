@@ -7,11 +7,11 @@ const digosTotalVaccines = 80918;
 </script>
 
 <template>
-  <main class="bg-white text-black mx-auto py-10 items-center justify-between">
+  <main class="bg-white text-black pulseOrient">
     <div class="container mx-auto flex-wrap">
       <div>
-        <h1 class="font-bold text-5xl py-3">COVID-19 Vaccination Overview</h1>
-        <p>
+        <h1 class="mainHeading py-3">COVID-19 Vaccination Overview</h1>
+        <p class="mainParagraph">
           {{ vaccinationPercentage }}% of the Philippine population has received at
           least one dose of a COVID-19 vaccine. {{ individualDoses }} million doses
           have been administered nationally, and {{ dailyDoses }} are now

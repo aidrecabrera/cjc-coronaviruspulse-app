@@ -3,14 +3,14 @@ const dateUpdated = "July 17, 2022";
 </script>
 
 <template>
-  <main class="bg-white text-black mx-auto py-10 items-center justify-between">
+  <main class="pulseOrient bg-white text-black py-10 items-center">
     <div class="container mx-auto flex-wrap">
       <div>
         <h5>Last updated on {{ dateUpdated }}</h5>
       </div>
       <div>
-        <h1 class="font-bold text-5xl py-3">Digos City Summary</h1>
-        <p>
+        <h1 class="mainHeading py-3">Digos City Summary</h1>
+        <p class="mainParagraph">
           The official Digos City government website for data and insights on
           <a
             href
