@@ -21,7 +21,7 @@ export default {
 <template>
   <header>
     <div>
-      <nav class="relative flex flex-wrap items-center justify-between py-8 bg-red mb-3">
+      <nav class="relative flex flex-wrap items-center justify-between py-8 bg-red">
         <div class="container px-32 mx-auto flex flex-wrap items-center justify-between">
           <div
             class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"

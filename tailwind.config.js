@@ -15,6 +15,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
+      serif: ['Playfair Display', 'serif'],
       baseFont: ['Inter', 'roboto', 'serif']
     },
     screens: {
@@ -34,6 +35,8 @@ module.exports = {
       colors: {
         red: '#643047',
         black: '#001219',
+        yellow: '#ecdca4',
+        blue: '#08141c',
       },
     },
   },

@@ -3,8 +3,8 @@ const dateUpdated = "July 17, 2022";
 </script>
 
 <template>
-  <main class="pulseOrient bg-white text-black py-10 items-center">
-    <div class="container mx-auto flex-wrap">
+  <main class="relative flex flex-wrap items-center justify-between my-0 py-8 bg-white text-black">
+    <div class="container flex-wrap mx-auto px-32 items-center">
       <div>
         <h5>Last updated on {{ dateUpdated }}</h5>
       </div>
@@ -17,7 +17,7 @@ const dateUpdated = "July 17, 2022";
           >SARS-CoV-2 (COVID-19)</a>
         </p>
       </div>
-      <div class>
+      <div class="py-5">
         <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
       </div>
     </div>

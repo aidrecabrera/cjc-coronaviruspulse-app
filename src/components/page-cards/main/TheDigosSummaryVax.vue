@@ -7,8 +7,8 @@ const digosTotalVaccines = 80918;
 </script>
 
 <template>
-  <main class="bg-white text-black pulseOrient">
-    <div class="container mx-auto flex-wrap">
+  <main class="relative flex flex-wrap items-center justify-between py-5 bg-white text-black mb-3">
+    <div class="container flex-wrap mx-auto px-32 items-center">
       <div>
         <h1 class="mainHeading py-3">COVID-19 Vaccination Overview</h1>
         <p class="mainParagraph">
@@ -20,7 +20,7 @@ const digosTotalVaccines = 80918;
           COVID-19 vaccine, and a total of {{ 80918 }} doses were administered.
         </p>
       </div>
-      <div class="pt-5">
+      <div class="py-5">
         <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
       </div>
     </div>
