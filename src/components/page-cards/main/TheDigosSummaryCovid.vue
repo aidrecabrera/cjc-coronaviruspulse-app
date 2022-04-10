@@ -1,4 +1,5 @@
 <script setup>
+import TheSummaryCovidDashboard from "../../dashboard-charts/main-summary-dashboards/TheSummaryCovidDashboard.vue";
 const dateUpdated = "Tuesday, 8 March 20200 at 7:00 AM";
 </script>
 
@@ -20,10 +21,10 @@ const dateUpdated = "Tuesday, 8 March 20200 at 7:00 AM";
         </p>
       </div>
       <div class="pt-5">
+        <the-summary-covid-dashboard />
         <img src="https://i.postimg.cc/VNNstWdV/dummy-Covid-Dashboard.png" alt />
       </div>
-    </div>
-  </main>
+    </div> </main>
 </template>
 
 <style scoped>
