@@ -12,11 +12,13 @@ specifiers:
   tailwindcss: ^3.0.23
   vite: ^2.9.1
   vue: ^3.2.31
+  vue-chartjs: ^4.0.5
   vue-router: ^4.0.14
 
 dependencies:
   chart.js: 3.7.1
   vue: 3.2.31
+  vue-chartjs: 4.0.5_chart.js@3.7.1+vue@3.2.31
   vue-router: 4.0.14_vue@3.2.31
 
 devDependencies:
@@ -2194,6 +2196,16 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /vue-chartjs/4.0.5_chart.js@3.7.1+vue@3.2.31:
+    resolution: {integrity: sha512-02DuKqHrmfy8TXIaKJocnsGA1yS5AHhiPQ2XXhvZc78n4nBiR+yFL1edYvMDbvdPtku7qptd4y0Ew2iDyyyLZQ==}
+    peerDependencies:
+      chart.js: ^3.7.0
+      vue: ^3.0.0-0 || ^2.6.0
+    dependencies:
+      chart.js: 3.7.1
+      vue: 3.2.31
+    dev: false
 
   /vue-router/4.0.14_vue@3.2.31:
     resolution: {integrity: sha512-wAO6zF9zxA3u+7AkMPqw9LjoUCjSxfFvINQj3E/DceTt6uEz1XZLraDhdg2EYmvVwTBSGlLYsUw8bDmx0754Mw==}
