@@ -3,3 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .mainHeading {
+    @apply font-bold text-3xl;
+  }
+  .mainParagraph {
+    @apply justify-start;
+  }
+  .pulseOrient {
+    @apply container px-32 mx-auto items-center justify-between;
+  }
+}

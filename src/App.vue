@@ -21,71 +21,57 @@ export default {
 <template>
   <header>
     <div>
-      <nav class="relative flex flex-wrap items-center justify-between py-8 bg-red">
+      <nav class="flex items-center justify-between py-8 bg-red">
         <div class="container px-32 mx-auto flex flex-wrap items-center justify-between">
-          <div
-            class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
-          >
-            <a href="https://flowbite.com" class="flex items-center">
-              <img
-                src="https://apps.cjc.edu.ph/wp-content/uploads/2017/09/cjclogo.png"
-                class="mr-3 h-14 sm:h-14"
-                alt="COVID Pulse"
-              />
-              <span
-                class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white"
-              >COVID Pulse</span>
+          <div class="w-full flex justify-between lg:w-auto lg:flex-col lg:justify-between">
+            <a href="https://www.cjc.edu.com" class="flex items-center">
+              <img src="../src/assets/covidpulselogo.svg" class="mr-3 h-14 sm:h-14" alt="COVID Pulse" />
             </a>
-            <button
-              class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-white block lg:hidden outline-none focus:outline-none"
-              type="button"
-              v-on:click="toggleNavbar()"
-            >
-              <i class="fas fa-bars text-black">Hamburger</i>
+            <button type="button"
+              class="text-red-700 hover:text-white border border-red-700 hover:bg-white ease-in duration-300 focus:ring-1 focus:ring-red-300 font-medium rounded-lg text-sm px-5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900 lg:hidden outline-none focus:outline-none"
+              v-on:click="toggleNavbar()">
+              <div class="space-y-1">
+                <div class="w-5 h-0.5 bg-white"></div>
+                <div class="w-5 h-0.5 bg-white"></div>
+                <div class="w-5 h-0.5 bg-white"></div>
+              </div>
             </button>
+            <button class type="button" v-on:click="toggleNavbar()"></button>
           </div>
-          <div
-            v-bind:class="{ 'hidden': !showMenu, 'flex': showMenu }"
-            class="lg:flex lg:flex-grow items-center"
-          >
+          <div v-bind:class="{ 'hidden': !showMenu, 'flex': showMenu }" class="lg:flex lg:flex-grow items-center">
             <ul class="flex flex-col lg:flex-row list-none ml-auto">
               <li class="nav-item">
                 <a
-                  class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                >
-                  <i class="fab fa-facebook-square text-lg leading-lg text-white opacity-75" />
+                  class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                  <i class="text-lg leading-lg text-white opacity-75" />
                   <RouterLink to="/HomeView" class="text-white">Home</RouterLink>
                 </a>
               </li>
               <li class="nav-item">
                 <a
-                  class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                >
-                  <i class="fab fa-twitter text-lg leading-lg text-white opacity-75" />
+                  class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                  <i class="text-lg leading-lg text-white opacity-75" />
                   <RouterLink to="/InsightsView" class="text-white">COVID-19 Insights</RouterLink>
                 </a>
               </li>
               <li class="nav-item">
                 <a
-                  class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                >
-                  <i class="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
+                  class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                  <i class="text-lg leading-lg text-white opacity-75" />
                   <RouterLink to="/HealthWellbeing" class="text-white">Health and Wellbeing</RouterLink>
                 </a>
               </li>
               <li class="nav-item">
                 <a
-                  class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                >
-                  <i class="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
+                  class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                  <i class="text-lg leading-lg text-white opacity-75" />
                   <RouterLink to="/Insights" class="text-white">COVID-19 Updates</RouterLink>
                 </a>
               </li>
               <li class="nav-item">
                 <a
-                  class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                >
-                  <i class="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
+                  class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                  <i class="text-lg leading-lg text-white opacity-75" />
                   <RouterLink to="/Insights" class="text-white">About</RouterLink>
                 </a>
               </li>

@@ -5,6 +5,7 @@ specifiers:
   '@cypress/vue': ^3.1.1
   '@vitejs/plugin-vue': ^2.3.1
   autoprefixer: ^10.4.4
+  chart.js: ^3.7.1
   cypress: ^9.5.3
   postcss: ^8.4.12
   start-server-and-test: ^1.14.0
@@ -14,6 +15,7 @@ specifiers:
   vue-router: ^4.0.14
 
 dependencies:
+  chart.js: 3.7.1
   vue: 3.2.31
   vue-router: 4.0.14_vue@3.2.31
 
@@ -536,6 +538,10 @@ packages:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
     dev: true
+
+  /chart.js/3.7.1:
+    resolution: {integrity: sha512-8knRegQLFnPQAheZV8MjxIXc5gQEfDFD897BJgv/klO/vtIyFFmgMXrNfgrXpbTr/XbTturxRgxIXx/Y+ASJBA==}
+    dev: false
 
   /check-more-types/2.24.0:
     resolution: {integrity: sha512-Pj779qHxV2tuapviy1bSZNEL1maXr13bPYpsvSDB68HlYcYuhlDrmGd63i0JHMCLKzc7rUSNIrpdJlhVlNwrxA==}

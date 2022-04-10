@@ -17,13 +17,4 @@ import TheCovidUpdatesVue from '../page-cards/main/TheCovidUpdates.vue';
 </template>
 
 <style>
-.mainHeading {
-  @apply font-bold text-3xl;
-}
-.mainParagraph {
-  @apply justify-start;
-}
-.pulseOrient {
-  @apply container px-32 mx-auto items-center justify-between;
-}
 </style>
