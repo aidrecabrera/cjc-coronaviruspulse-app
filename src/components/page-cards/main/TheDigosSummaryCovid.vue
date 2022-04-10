@@ -1,6 +1,19 @@
+<script>
+import axios from 'axios'
+export default {
+  setup() {
+    return {}
+  },
+  // COVID-19 Data Summary
+  async created() {
+    const { data } = await axios.get('https://covid19-api-philippines.herokuapp.com/api/summary').then(response => (this.data = response))
+    console.log('Yay, it worked!')
+    console.log(data.last_update)
+  }
+}
+</script>
 <script setup>
 import TheSummaryCovidDashboard from "../../dashboard-charts/main-summary-dashboards/TheSummaryCovidDashboard.vue";
-const dateUpdated = "Tuesday, 8 March 20200 at 7:00 AM";
 </script>
 
 <template>
