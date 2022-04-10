@@ -11,6 +11,10 @@ export default {
     console.log(data.last_update)
   }
 }
+const dateaa = await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+console.log(dateaa.data.bpi)
+const filterData = dateaa.data.bpi.USD.description
+console.log(filterData)
 </script>
 <script setup>
 import TheSummaryCovidDashboard from "../../dashboard-charts/main-summary-dashboards/TheSummaryCovidDashboard.vue";
@@ -20,7 +24,7 @@ import TheSummaryCovidDashboard from "../../dashboard-charts/main-summary-dashbo
   <main class="relative flex flex-wrap items-center justify-between my-0 pt-5 bg-white text-black">
     <div class="container flex-wrap mx-auto px-32 items-center">
       <div>
-        <h5 class="pt-5 pb-7">Last updated on {{ dateUpdated }}</h5>
+        <h5 class="pt-5 pb-7">Last updated on {{ filterData }}</h5>
       </div>
       <div>
         <h1 class="mainHeading py-3">Digos City Summary</h1>
