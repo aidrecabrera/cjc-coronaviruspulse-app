@@ -3,7 +3,6 @@ import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <script>
-import axios from 'axios';
 export default {
   name: "purple-navbar",
   data() {

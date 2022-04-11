@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "chart.js": "^3.7.1",
+    "dayjs": "^1.11.0",
     "vue": "^3.2.31",
     "vue-chartjs": "^4.0.5",
     "vue-router": "^4.0.14"
