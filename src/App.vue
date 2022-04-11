@@ -72,7 +72,7 @@ export default {
                 <a
                   class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                   <i class="text-lg leading-lg text-white opacity-75" />
-                  <RouterLink to="/Insights" class="text-white">About</RouterLink>
+                  <RouterLink to="/About" class="text-white">About</RouterLink>
                 </a>
               </li>
             </ul>
@@ -81,7 +81,7 @@ export default {
       </nav>
     </div>
   </header>
-  <RouterView />
+  <RouterView/>
 </template>
 
 <style>

@@ -1,4 +1,11 @@
-<script setup></script>
+<script>
+import TheTestDashboardVue from "../../dashboard-charts/main-summary-dashboards/TheTestDashboard.vue"
+export default {
+  components: {
+    LineChart
+  }
+}
+</script>
 
 <template>
   <div class="flex">
@@ -8,6 +15,7 @@
         Organization, and other various organizations.</p>
       <button>See all the latest COVID-19 updates and messages</button>
     </div>
+    <TheTestDashboardVue />
   </div>
   <div class="flex">
     <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">

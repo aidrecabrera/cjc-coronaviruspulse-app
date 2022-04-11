@@ -4,6 +4,18 @@ const corStudentsVax = 100;
 const corVaxDataUpdated = "March 3, 2022";
 </script>
 
+<script>
+export default {
+  data() {
+    return {
+      empVaxed: 100,
+      stuVaxed: 100,
+      startingPoint: 0,
+    }
+  }
+}
+</script>
+
 <template>
   <main class>
     <div class="main-parent">
@@ -33,7 +45,7 @@ const corVaxDataUpdated = "March 3, 2022";
             src="https://i0.wp.com/www.cjc.edu.ph/wp-content/uploads/2021/06/vaccine.jpg?resize=624%2C468&ssl=1" alt />
         </div>
       </div>
-      <div class="align-middle py-10">
+      <div class="items-center align-middle py-5 pl-3">
         <div class>
           <div class>
             <h1 class="main-heading">Cor Jesu College vaccination rates</h1>

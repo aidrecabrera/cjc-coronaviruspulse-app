@@ -1,10 +1,10 @@
 <script>
 import axios from 'axios'
-import TheSummaryCovidDashboard from "../../dashboard-charts/main-summary-dashboards/TheSummaryCovidDashboard.vue"
 import dayjs from 'dayjs'
-const dateaa = await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
-let filterData = dateaa.data.bpi.USD.description
+import CovidChartSummary from '../../dashboard-charts/main-summary-dashboards/TheSummaryCovidDashboard.vue'
 export default {
+  name: 'Chart',
+  components: { CovidChartSummary },
   data() {
     return {
       nowUpdated: ''
@@ -37,8 +37,7 @@ export default {
         </p>
       </div>
       <div class="pt-5">
-        <the-summary-covid-dashboard />
-        <img src="https://i.postimg.cc/VNNstWdV/dummy-Covid-Dashboard.png" alt />
+        <CovidChartSummary />
       </div>
     </div> </main>
 </template>

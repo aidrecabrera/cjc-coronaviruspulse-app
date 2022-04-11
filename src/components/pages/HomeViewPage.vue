@@ -12,8 +12,7 @@ import TheCovidUpdatesVue from '../page-cards/main/TheCovidUpdates.vue';
     <TheDigosSummaryVax />
     <TheDigosAlertLevelBoard />
     <TheHealthAndWellbeing />
-    <TheCovidUpdatesVue />
-  </main>
+    <TheCovidUpdatesVue /> </main>
 </template>
 
 <style>
