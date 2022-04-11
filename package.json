@@ -15,11 +15,13 @@
     "dayjs": "^1.11.0",
     "vue": "^3.2.31",
     "vue-chartjs": "^4.0.5",
+    "vue-number-animation": "^1.1.2",
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
     "@cypress/vite-dev-server": "^2.2.2",
     "@cypress/vue": "^3.1.1",
+    "@tailwindcss/typography": "^0.5.2",
     "@vitejs/plugin-vue": "^2.3.1",
     "autoprefixer": "^10.4.4",
     "cypress": "^9.5.3",

@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@cypress/vite-dev-server': ^2.2.2
   '@cypress/vue': ^3.1.1
+  '@tailwindcss/typography': ^0.5.2
   '@vitejs/plugin-vue': ^2.3.1
   autoprefixer: ^10.4.4
   chart.js: ^3.7.1
@@ -14,6 +15,7 @@ specifiers:
   vite: ^2.9.1
   vue: ^3.2.31
   vue-chartjs: ^4.0.5
+  vue-number-animation: ^1.1.2
   vue-router: ^4.0.14
 
 dependencies:
@@ -21,11 +23,13 @@ dependencies:
   dayjs: 1.11.0
   vue: 3.2.31
   vue-chartjs: 4.0.5_chart.js@3.7.1+vue@3.2.31
+  vue-number-animation: 1.1.2
   vue-router: 4.0.14_vue@3.2.31
 
 devDependencies:
   '@cypress/vite-dev-server': 2.2.2_vite@2.9.1
   '@cypress/vue': 3.1.1_cypress@9.5.3+vue@3.2.31
+  '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.23
   '@vitejs/plugin-vue': 2.3.1_vite@2.9.1+vue@3.2.31
   autoprefixer: 10.4.4_postcss@8.4.12
   cypress: 9.5.3
@@ -173,6 +177,17 @@ packages:
 
   /@sideway/pinpoint/2.0.0:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
+    dev: true
+
+  /@tailwindcss/typography/0.5.2_tailwindcss@3.0.23:
+    resolution: {integrity: sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      tailwindcss: 3.0.23_autoprefixer@10.4.4
     dev: true
 
   /@types/node/14.18.12:
@@ -1292,6 +1307,10 @@ packages:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
     dev: true
 
+  /gsap/3.10.2:
+    resolution: {integrity: sha512-exJVOda3O1NpgGjM4dzZONmSODWFP+JF/DwfiBfCPQPr15nm3M0TQczYKLZlMdBNdWxHMvRPKVqc1e1/6YD+zA==}
+    dev: false
+
   /has-flag/3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
@@ -1522,6 +1541,18 @@ packages:
       rxjs: 7.5.5
       through: 2.3.8
       wrap-ansi: 7.0.0
+    dev: true
+
+  /lodash.castarray/4.4.0:
+    resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
+    dev: true
+
+  /lodash.isplainobject/4.0.6:
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
+    dev: true
+
+  /lodash.merge/4.6.2:
+    resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
 
   /lodash.once/4.1.1:
@@ -2206,6 +2237,12 @@ packages:
     dependencies:
       chart.js: 3.7.1
       vue: 3.2.31
+    dev: false
+
+  /vue-number-animation/1.1.2:
+    resolution: {integrity: sha512-3tPgGl8OSWpEVOcoUSl/sikhx8AufYQL+oFAy/xzfQap7o7PeppD3W9WLOn9RvhMi9cXrja5aSeFnfdLS8iFww==}
+    dependencies:
+      gsap: 3.10.2
     dev: false
 
   /vue-router/4.0.14_vue@3.2.31:

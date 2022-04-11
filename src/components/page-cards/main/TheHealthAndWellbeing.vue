@@ -7,7 +7,33 @@ const corVaxDataUpdated = "March 3, 2022";
 <template>
   <main class>
     <div class="main-parent">
-      <div class="align-middle py-7">
+      <div class=" pr-10">
+        <div>
+          <div
+            class="rounded-2xl opacity-0 hover:opacity-100 ease-in-out duration-300 bg-red bg-opacity-75 absolute inset-0 z-10 flex justify-center items-center text-6xl text-white font-semibold">
+            <div class="flex flex-col text-center items-center">
+              <div class="flex flex-col text-center items-center">
+                <img
+                  src="https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/276989213_7861819263843447_488147243978096994_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeG-0xmSjDvoZO8w5AoylHHDEBUgn-5NSNMQFSCf7k1I0-4pwg82AiyErx22Bg658Z-Ip7-_fhVyffauXH-_KyeK&_nc_ohc=qroI3MNX18oAX-nNFMd&_nc_ht=scontent-nrt1-1.xx&oh=00_AT8Vhj8L9bXBUMZF8CDnVyVzbk6j3A2BJd_E14EiP1fMaw&oe=6258C863"
+                  alt="" width="10%" class="rounded-full">
+                <p class=" text-sm pt-1 pb-3">Harry Dave Villasor </p>
+              </div>
+              <a class="text-white font-serif text-3xl text-center"
+                href="https://www.cjc.edu.ph/cjc-boosts-digos-lgu-in-vaccinating-digosenos/" target="_blank">
+                Read: CJC Boosts Digos LGU
+                <br />in Vaccinating Digoseños
+              </a>
+              <blockquote class=" text-white italic font-thin prose prose-blockquote: text-sm py-5 mx-20 text-center">
+                <p>Cor Jesu College supports the COVID-19 vaccination program of the local government of Digos City as
+                  it opened its gates to become the second vaccination center in the city.</p>
+              </blockquote>
+            </div>
+          </div>
+          <img class="w-auto rounded-2xl"
+            src="https://i0.wp.com/www.cjc.edu.ph/wp-content/uploads/2021/06/vaccine.jpg?resize=624%2C468&ssl=1" alt />
+        </div>
+      </div>
+      <div class="align-middle py-10">
         <div class>
           <div class>
             <h1 class="main-heading">Cor Jesu College vaccination rates</h1>
@@ -27,49 +53,33 @@ const corVaxDataUpdated = "March 3, 2022";
               <p class="paragraph">of Students Vaccinated</p>
             </div>
           </div>
-          <div>
+          <div class="pt-3">
             <p>
               <i>Data as of {{ corVaxDataUpdated }}. We will continue to update the vaccination rates as needed.</i>
             </p>
           </div>
         </div>
       </div>
-      <div class>
-        <div
-          class="rounded-2xl opacity-0 hover:opacity-100 ease-in-out duration-300 bg-red bg-opacity-75 absolute inset-0 z-10 flex justify-center items-center text-6xl text-white font-semibold"
-        >
-          <a
-            class="text-white font-serif text-3xl text-center"
-            href="https://www.cjc.edu.ph/cjc-boosts-digos-lgu-in-vaccinating-digosenos/"
-            target="_blank"
-          >
-            Read: CJC Boosts Digos LGU
-            <br />in Vaccinating Digoseños
-          </a>
-        </div>
-        <img
-          class="w-144 rounded-2xl"
-          src="https://i0.wp.com/www.cjc.edu.ph/wp-content/uploads/2021/06/vaccine.jpg?resize=624%2C468&ssl=1"
-          alt
-        />
-      </div>
-    </div>
-  </main>
+    </div> </main>
 </template>
 
 <style scoped>
 .main-parent {
   @apply bg-white text-black grid grid-flow-col justify-between px-52 py-20;
 }
+
 .main-children-statistics {
   @apply grid grid-cols-2 py-5;
 }
+
 .percentage {
   @apply text-red font-serif text-9xl font-extrabold;
 }
+
 .paragraph {
   @apply text-black font-serif text-3xl;
 }
+
 .main-heading {
   @apply font-serif text-5xl py-5;
 }
