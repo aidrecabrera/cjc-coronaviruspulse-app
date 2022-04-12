@@ -2,18 +2,22 @@
 import axios from 'axios'
 import dayjs from 'dayjs'
 import CovidChartSummary from '../../dashboard-charts/main-summary-dashboards/TheSummaryCovidDashboard.vue'
+import TheLineSummaryCovidDashboard from '../../dashboard-charts/main-summary-dashboards/TheLineSummaryCovidDashboard.vue'
 export default {
   name: 'Chart',
-  components: { CovidChartSummary },
+  components: { CovidChartSummary, TheLineSummaryCovidDashboard },
   data() {
     return {
-      nowUpdated: ''
+      nowUpdatedDate: '',
+      nowUpdateTime: ''
     }
   },
   async created() {
     await axios.get('https://covid19-api-philippines.herokuapp.com/api/summary').then(response => {
-      this.nowUpdated = dayjs(response.data.last_update).format('MMMM D, YYYY, h:mm A')
-      console.log(dayjs(response.data.last_update).format('MMMM D, YYYY, h:mm A'))
+      this.nowUpdatedDate = dayjs(response.data.last_update).format('dddd, MMMM D, YYYY')
+      this.nowUpdatedTime = dayjs(response.data.last_update).format('h:mm A')
+
+      console.log(dayjs(response.data.last_update).format('h:mm A'))
     })
   }
 }
@@ -23,7 +27,7 @@ export default {
   <main class="relative flex flex-wrap items-center justify-between my-0 pt-5 bg-white text-black">
     <div class="container flex-wrap mx-auto px-32 items-center">
       <div>
-        <h5 class="pt-5">Last updated on {{ nowUpdated }} </h5>
+        <h5 class="pt-5">Last updated on {{ nowUpdatedDate }} at {{ nowUpdatedTime }} </h5>
       </div>
       <div>
         <h1 class="mainHeading py-3">Digos City Summary</h1>
@@ -37,6 +41,7 @@ export default {
         </p>
       </div>
       <div class="pt-5">
+        <TheLineSummaryCovidDashboard />
         <CovidChartSummary />
       </div>
     </div> </main>

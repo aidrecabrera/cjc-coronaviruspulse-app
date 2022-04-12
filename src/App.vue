@@ -81,7 +81,18 @@ export default {
       </nav>
     </div>
   </header>
-  <RouterView/>
+  <main>
+    <div class=" border-b-4 border-yellow bg-black max-w-full">
+      <div class="flex flex-wrap items-center justify-center">
+        <div class=" content-center text-black bg-white box-border w-auto px-5 py-1 my-3">
+          <span class=" font-bold uppercase">ALWAYS STAY SAFE, DIGOSEñOS!</span>
+        </div>
+        <span class=" text-white font-bold tracking-wide uppercase text-sm px-3 py-3 font-sans">
+          Wear mask, get vaccinated, and always observe minimum health protocol!
+        </span>
+      </div>
+    </div>
+    <RouterView />  </main>
 </template>
 
 <style>
