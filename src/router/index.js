@@ -1,49 +1,51 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import InsightsView from '../views/UpdatesView.vue'
-import HealthWellbeingView from '../views/HealthWellbeingView.vue'
-import UpdatesView from '../views/UpdatesView.vue'
-import AboutView from '../views/AboutsView.vue'
+import home from '../views/HomeView.vue'
+import covidinsights from '../views/InsightsView.vue'
+import covidhealth from '../views/HealthWellbeingView.vue'
+import covidupdates from '../views/UpdatesView.vue'
+import about from '../views/AboutsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+  routes: [{
+     redirect: '/home'
+    },
     {
-      path: '/homeview',
+      path: '/home',
       name: 'home',
-      component: HomeView,
+      component: home,
       meta: {
         title: 'Home - COVID Pulse | Digos City Coronavirus Resource Center'
       }
     },
     {
-      path: '/insightsview',
-      name: 'insights',
-      component: InsightsView,
+      path: '/covidinsights',
+      name: 'covidinsights',
+      component: covidinsights,
       meta: {
         title: 'Insights - COVID Pulse | Digos City Coronavirus Resource Center'
       }
     },
     {
-      path: '/healthwellbeingview',
-      name: 'healthwellbeing',
-      component: HealthWellbeingView,
+      path: '/covidhealth',
+      name: 'covidhealth',
+      component: covidhealth,
       meta: {
         title: 'Health & Wellbeing - COVID Pulse | Digos City Coronavirus Resource Center'
       }
     },
     {
-      path: '/updatesview',
-      name: 'updates',
-      component: UpdatesView,
+      path: '/covidupdates',
+      name: 'covidupdates',
+      component: covidupdates,
       meta: {
         title: 'COVID-19 Updates - COVID Pulse | Digos City Coronavirus Resource Center'
       }
     },
     {
-      path: '/aboutview',
+      path: '/about',
       name: 'about',
-      component: AboutView,
+      component: about,
       meta: {
         title: 'About - COVID Pulse | Digos City Coronavirus Resource Center'
       }

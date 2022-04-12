@@ -16,32 +16,20 @@ export default {
 		},
 	},
 };
-
-
 </script>
 
 <template>
 	<header>
 		<div>
 			<nav class="flex items-center justify-between py-8 bg-red">
-				<div
-					class="container px-32 mx-auto flex flex-wrap items-center justify-between"
-				>
-					<div
-						class="w-full flex justify-between lg:w-auto lg:flex-col lg:justify-between"
-					>
+				<div class="container px-32 mx-auto flex flex-wrap items-center justify-between">
+					<div class="w-full flex justify-between lg:w-auto lg:flex-col lg:justify-between">
 						<a href="https://www.cjc.edu.com" class="flex items-center">
-							<img
-								src="../src/assets/covidpulselogo.svg"
-								class="mr-3 h-14 sm:h-14"
-								alt="COVID Pulse"
-							/>
+							<img src="../src/assets/covidpulselogo.svg" class="mr-3 h-14 sm:h-14" alt="COVID Pulse" />
 						</a>
-						<button
-							type="button"
+						<button type="button"
 							class="text-red-700 hover:text-white border border-red-700 hover:bg-white ease-in duration-300 focus:ring-1 focus:ring-red-300 font-medium rounded-lg text-sm px-5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900 lg:hidden outline-none focus:outline-none"
-							v-on:click="toggleNavbar()"
-						>
+							v-on:click="toggleNavbar()">
 							<div class="space-y-1">
 								<div class="w-5 h-0.5 bg-white"></div>
 								<div class="w-5 h-0.5 bg-white"></div>
@@ -50,57 +38,41 @@ export default {
 						</button>
 						<button class type="button" v-on:click="toggleNavbar()"></button>
 					</div>
-					<div
-						v-bind:class="{ hidden: !showMenu, flex: showMenu }"
-						class="lg:flex lg:flex-grow items-center"
-					>
+					<div v-bind:class="{ hidden: !showMenu, flex: showMenu }" class="lg:flex lg:flex-grow items-center">
 						<ul class="flex flex-col lg:flex-row list-none ml-auto">
 							<li class="nav-item">
 								<a
-									class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-								>
+									class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
 									<i class="text-lg leading-lg text-white opacity-75" />
-									<RouterLink to="/HomeView" class="text-white"
-										>Home</RouterLink
-									>
+									<RouterLink to="/home" class="text-white">Home</RouterLink>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a
-									class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-								>
+									class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
 									<i class="text-lg leading-lg text-white opacity-75" />
-									<RouterLink to="/InsightsView" class="text-white"
-										>COVID-19 Insights</RouterLink
-									>
+									<RouterLink to="/covidinsights" class="text-white">COVID-19 Insights</RouterLink>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a
-									class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-								>
+									class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
 									<i class="text-lg leading-lg text-white opacity-75" />
-									<RouterLink to="/HealthWellbeing" class="text-white"
-										>Health and Wellbeing</RouterLink
-									>
+									<RouterLink to="/covidhealth" class="text-white">Health and Wellbeing</RouterLink>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a
-									class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-								>
+									class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
 									<i class="text-lg leading-lg text-white opacity-75" />
-									<RouterLink to="/Insights" class="text-white"
-										>COVID-19 Updates</RouterLink
-									>
+									<RouterLink to="/covidupdates" class="text-white">COVID-19 Updates</RouterLink>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a
-									class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-								>
+									class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
 									<i class="text-lg leading-lg text-white opacity-75" />
-									<RouterLink to="/About" class="text-white">About</RouterLink>
+									<RouterLink to="/about" class="text-white">About</RouterLink>
 								</a>
 							</li>
 						</ul>
@@ -112,16 +84,11 @@ export default {
 	<main>
 		<div class="border-b-4 border-yellow bg-black max-w-full">
 			<div class="flex flex-wrap items-center justify-center">
-				<div
-					class="rounded-sm content-center text-black bg-white box-border w-auto px-5 py-1 my-3"
-				>
-					<span class="font-bold uppercase py-10"
-						>ALWAYS STAY SAFE, DIGOSEñOS!</span
-					>
+				<div class="rounded-sm content-center text-black bg-white box-border w-auto px-5 py-1 my-3">
+					<span class="font-bold uppercase py-10">ALWAYS STAY SAFE, DIGOSEñOS!</span>
 				</div>
 				<span
-					class="text-white font-bold tracking-wide uppercase text-sm px-3 py-3 font-sans hover:underline hover:ease-in-out hover:duration-300"
-				>
+					class="text-white font-bold tracking-wide uppercase text-sm px-3 py-3 font-sans hover:underline hover:ease-in-out hover:duration-300">
 					Wear mask, get vaccinated, and always observe minimum health protocol!
 				</span>
 			</div>

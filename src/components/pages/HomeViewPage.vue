@@ -9,7 +9,6 @@ import TheNewsUpdatesComponentVue from '../page-cards/updates/TheNewsUpdatesComp
 
 <template>
   <main>
-    <TheNewsUpdatesComponentVue />
     <TheDigosSummaryCovidVue />
     <TheDigosSummaryVax />
     <TheDigosAlertLevelBoard />

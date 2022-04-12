@@ -3,7 +3,9 @@ import NewsPageView from '../components/pages/NewsViewPage.vue'
 </script>
 
 <template>
-  <header></header>
+  <header>
+    
+  </header>
   <main>
     <NewsPageView />
   </main>

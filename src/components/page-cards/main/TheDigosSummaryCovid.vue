@@ -33,7 +33,7 @@ export default {
         <h1 class="mainHeading py-3">Digos City Summary</h1>
         <p class="mainParagraph">
           The official Digos City government website for data and insights on
-          <a href>
+          <a href="https://doh.gov.ph/COVID-19/FAQs" target="_blank">
             <u>
               <b>SARS-CoV-2 (COVID-19)</b>
             </u>

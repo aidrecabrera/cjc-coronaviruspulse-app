@@ -18,7 +18,7 @@
 			<div class="grid grid-cols-3 py-7 px-0 justify-between text-yellow">
 				<div class="main-card">
 					<a href="#">
-						<img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt />
+						<img class="rounded-t-lg" src=" " alt />
 					</a>
 					<div class="p-5">
 						<a href="#">
@@ -50,7 +50,7 @@
 				</div>
 				<div class="main-card">
 					<a href="#">
-						<img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt />
+						<img class="rounded-t-lg" src=" " alt />
 					</a>
 					<div class="p-5">
 						<a href="#">
@@ -82,7 +82,7 @@
 				</div>
 				<div class="main-card">
 					<a href="#">
-						<img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt />
+						<img class="rounded-t-lg" src=" " alt />
 					</a>
 					<div class="p-5">
 						<a href="#">
