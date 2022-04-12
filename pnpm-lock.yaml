@@ -9,6 +9,7 @@ specifiers:
   chart.js: ^3.7.1
   cypress: ^9.5.3
   dayjs: ^1.11.0
+  jquery: ^3.6.0
   postcss: ^8.4.12
   smooth-scrollbar: ^8.7.4
   start-server-and-test: ^1.14.0
@@ -22,6 +23,7 @@ specifiers:
 dependencies:
   chart.js: 3.7.1
   dayjs: 1.11.0
+  jquery: 3.6.0
   smooth-scrollbar: 8.7.4
   vue: 3.2.31
   vue-chartjs: 4.0.5_chart.js@3.7.1+vue@3.2.31
@@ -1477,6 +1479,10 @@ packages:
       '@sideway/formula': 3.0.0
       '@sideway/pinpoint': 2.0.0
     dev: true
+
+  /jquery/3.6.0:
+    resolution: {integrity: sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==}
+    dev: false
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}

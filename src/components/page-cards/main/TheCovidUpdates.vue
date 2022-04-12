@@ -1,9 +1,34 @@
 <script>
+import $ from 'jquery'
+export default {
+mounted() {
+  $(function() { 
+  $('#TheCard0').hover(function() {
+    $('#TheButton0').css({'border-width': '1px', 'border-color': 'black', 'padding-left': '1.25rem', 'padding-right': '1.25rem'});
+  }, function() { 
+    // on mouseout, reset the background colour
+    $('#TheButton0').css({'border-width': '0px', 'border-opacity': '0', 'padding-left': '0rem', 'padding-right': '0rem'});
+  }),
+  $('#TheCard1').hover(function() {
+    $('#TheButton1').css({'border-width': '1px', 'border-color': 'black', 'padding-left': '1.25rem', 'padding-right': '1.25rem'});
+  }, function() { 
+    // on mouseout, reset the background colour
+    $('#TheButton1').css({'border-width': '0px', 'border-opacity': '0', 'padding-left': '0rem', 'padding-right': '0rem'});
+  }),
+  $('#TheCard2').hover(function() {
+    $('#TheButton2').css({'border-width': '1px', 'border-color': 'black', 'padding-left': '1.25rem', 'padding-right': '1.25rem'});
+  }, function() { 
+    // on mouseout, reset the background colour
+    $('#TheButton2').css({'border-width': '0px', 'border-opacity': '0', 'padding-left': '0rem', 'padding-right': '0rem'});
+  });
+});
+}
+}
 </script>
 
 <template>
   <main class="bg-white">
-    <div class="flex flex-wrap items-center justify-center max-w-full">
+    <div class="flex flex-wrap items-center justify-center max-w-full py-5">
       <div
         class="
           container
@@ -32,18 +57,18 @@
         </div>
       </div>
       <div class="flex">
-        <div class="main-card">
+        <div id="TheCard0" class="main-card">
           <a href="#">
             <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt />
           </a>
           <div class="p-5">
             <a href="#">
               <span class="main-card-heading"
-                >National Vaccination Days Schedule</span
+                >National COVID-19 Vaccination Days Schedule</span
               >
             </a>
             <p class="main-card-date">March 7, 2022</p>
-            <a href="#" class="main-card-b">
+            <a href="#" id="TheButton0" class="main-card-b">
               Read More
               <svg
                 class="ml-2 -mr-1 w-4 h-4"
@@ -60,16 +85,16 @@
             </a>
           </div>
         </div>
-        <div class="main-card">
+        <div id="TheCard1" class="main-card">
           <a href="#">
             <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt />
           </a>
           <div class="p-5">
             <a href="#">
-              <span class="main-card-heading">COVID-19 Guidance Update</span>
+              <span class="main-card-heading">City of Government COVID-19 Guidance Update</span>
             </a>
             <p class="main-card-date">March 1, 2022</p>
-            <a href="#" class="main-card-b">
+            <a href="#" id="TheButton1" class="main-card-b">
               Read More
               <svg
                 class="ml-2 -mr-1 w-4 h-4"
@@ -86,7 +111,7 @@
             </a>
           </div>
         </div>
-        <div class="main-card">
+        <div id="TheCard2" class="main-card">
           <a href="#">
             <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt />
           </a>
@@ -97,7 +122,7 @@
               >
             </a>
             <p class="main-card-date">January 17, 2022</p>
-            <a href="#" class="main-card-b">
+            <a href="#" id="TheButton2" class="main-card-b">
               Read More
               <svg
                 class="ml-2 -mr-1 w-4 h-4"
@@ -121,7 +146,7 @@
 
 <style scoped>
 .main-card {
-  @apply max-w-sm bg-yellow hover:bg-transparent ease-in-out duration-500 shadow-md font-serif p-5 mb-3.5 mx-3 content-between;
+  @apply max-w-sm bg-yellow hover:bg-transparent ease-in-out duration-500 shadow-md font-serif p-5 mb-3.5 mx-3 content-between bg-opacity-50;
 }
 
 .main-card-heading {
