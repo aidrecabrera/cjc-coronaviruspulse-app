@@ -2,7 +2,7 @@
 
 <template>
 	<main class="relative flex flex-wrap items-center justify-between bg-blue text-yellow">
-		<div class="container flex-wrap mx-auto px-32 items-center divide-y divide-yellow pt-12 pb-5">
+		<div class="container flex-wrap mx-auto px-32 items-center divide-y divide-yellow pt-10 pb-5">
 			<div class="flex font-serif mx-auto justify-evenly pb-7">
 				<div class="container">
 					<h1 class="text-6xl font-serif">Keep Safe, Digoseño!</h1>
@@ -33,11 +33,17 @@
 						</p>
 						<a href="#" class="card-button">
 							Vaccine & booster information
-							<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd"
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
 									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd" />
+									clip-rule="evenodd"
+								/>
 							</svg>
 						</a>
 					</div>
@@ -59,11 +65,17 @@
 						</p>
 						<a href="#" class="card-button">
 							COVID-19 related resources
-							<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd"
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
 									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd" />
+									clip-rule="evenodd"
+								/>
 							</svg>
 						</a>
 					</div>
@@ -83,33 +95,37 @@
 						</p>
 						<a href="#" class="card-button">
 							Masking information
-							<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd"
+							<svg
+								class="ml-2 -mr-1 w-4 h-4"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
 									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-									clip-rule="evenodd" />
+									clip-rule="evenodd"
+								/>
 							</svg>
 						</a>
 					</div>
 				</div>
 			</div>
-		</div>	</main>
+		</div>
+	</main>
 </template>
 
 <style scoped>
 .main-card {
 	@apply flex justify-between max-w-sm;
 }
-
 .card-heading {
 	@apply mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-yellow;
 }
-
 .card-paragraph {
 	@apply pr-5 mb-7 font-sans text-gray-700 dark:text-yellow tracking-wide leading-relaxed text-left;
 }
-
 .card-button {
-	@apply focus:ring-0 ease-in duration-300 inline-flex items-center py-2 pr-3 text-sm font-medium text-center text-white rounded-lg hover:bg-red hover:text-white hover:pl-5 hover:pr-5 focus:outline-none focus:ring-red dark:text-yellow;
+	@apply focus:ring-0 ease-in duration-300 inline-flex items-center py-2 pr-3 text-sm font-medium text-center text-white rounded-lg hover:bg-red hover:text-white hover:pl-3 hover:pr-3 focus:outline-none focus:ring-red dark:text-yellow;
 }
 </style>
