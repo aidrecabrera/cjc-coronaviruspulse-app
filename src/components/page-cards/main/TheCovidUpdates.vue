@@ -1,34 +1,84 @@
 <script>
-import $ from 'jquery'
+import $ from "jquery";
 export default {
-mounted() {
-  $(function() { 
-  $('#TheCard0').hover(function() {
-    $('#TheButton0').css({'border-width': '1px', 'border-color': 'black', 'padding-left': '1.25rem', 'padding-right': '1.25rem', 'transition-timing-function': 'ease-in'});
-  }, function() { 
-    // on mouseout, reset the background colour
-    $('#TheButton0').css({'border-width': '0px', 'border-opacity': '0', 'padding-left': '0rem', 'padding-right': '0rem', 'transition-timing-function': 'ease-out', 'transition-delay': '0.1s'});
-  }),
-  $('#TheCard1').hover(function() {
-    $('#TheButton1').css({'border-width': '1px', 'border-color': 'black', 'padding-left': '1.25rem', 'padding-right': '1.25rem', 'transition-timing-function': 'ease-in'});
-  }, function() { 
-    // on mouseout, reset the background colour
-    $('#TheButton1').css({'border-width': '0px', 'border-opacity': '0', 'padding-left': '0rem', 'padding-right': '0rem', 'transition-timing-function': 'ease-out', 'transition-delay': '0.1s'});
-  }),
-  $('#TheCard2').hover(function() {
-    $('#TheButton2').css({'border-width': '1px', 'border-color': 'black', 'padding-left': '1.25rem', 'padding-right': '1.25rem', 'transition-timing-function': 'ease-in'});
-  }, function() { 
-    // on mouseout, reset the background colour
-    $('#TheButton2').css({'border-width': '0px', 'border-opacity': '0', 'padding-left': '0rem', 'padding-right': '0rem', 'transition-timing-function': 'ease-out', 'transition-delay': '0.1s'});
-  });
-});
-}
-}
+  mounted() {
+    $(function () {
+      $("#TheCard0").hover(
+        function () {
+          $("#TheButton0").css({
+            "border-width": "1px",
+            "border-color": "black",
+            "padding-left": "1.25rem",
+            "padding-right": "1.25rem",
+            "transition-timing-function": "ease-in",
+          });
+        },
+        function () {
+          // on mouseout, reset the background colour
+          $("#TheButton0").css({
+            "border-width": "0px",
+            "border-opacity": "0",
+            "padding-left": "0rem",
+            "padding-right": "0rem",
+            "transition-timing-function": "ease-out",
+            "transition-delay": "0.1s",
+          });
+        }
+      ),
+        $("#TheCard1").hover(
+          function () {
+            $("#TheButton1").css({
+              "border-width": "1px",
+              "border-color": "black",
+              "padding-left": "1.25rem",
+              "padding-right": "1.25rem",
+              "transition-timing-function": "ease-in",
+            });
+          },
+          function () {
+            // on mouseout, reset the background colour
+            $("#TheButton1").css({
+              "border-width": "0px",
+              "border-opacity": "0",
+              "padding-left": "0rem",
+              "padding-right": "0rem",
+              "transition-timing-function": "ease-out",
+              "transition-delay": "0.1s",
+            });
+          }
+        ),
+        $("#TheCard2").hover(
+          function () {
+            $("#TheButton2").css({
+              "border-width": "1px",
+              "border-color": "black",
+              "padding-left": "1.25rem",
+              "padding-right": "1.25rem",
+              "transition-timing-function": "ease-in",
+            });
+          },
+          function () {
+            // on mouseout, reset the background colour
+            $("#TheButton2").css({
+              "border-width": "0px",
+              "border-opacity": "0",
+              "padding-left": "0rem",
+              "padding-right": "0rem",
+              "transition-timing-function": "ease-out",
+              "transition-delay": "0.1s",
+            });
+          }
+        );
+    });
+  },
+};
 </script>
 
 <template>
   <main class="bg-white">
-    <div class="flex flex-wrap items-center justify-center max-w-full py-5">
+    <div
+      class="flex flex-wrap items-center justify-center max-w-full py-5 pb-20"
+    >
       <div
         class="
           container
@@ -47,11 +97,25 @@ mounted() {
         </div>
         <div class="col-span-2 text-black pl-7 pt-16 pb-5">
           <p>
-            You can stay updated by continue reading the latest COVID-19 updates from the Government of Digos City,
-            Department of Health, World Health Organization, and other various
-            organizations.
+            You can stay updated by continue reading the latest COVID-19 updates
+            from the Government of Digos City, Department of Health, World
+            Health Organization, and other various organizations.
           </p>
-          <button onclick="window.open('http://google.com','_blank')" class="mt-5 px-5 py-2 flex align-middle bg-white border border-black hover:bg-black hover:text-white ease-in-out duration-300">
+          <button
+            onclick="window.open('http://google.com','_blank')"
+            class="
+              mt-5
+              px-5
+              py-2
+              flex
+              align-middle
+              bg-white
+              border border-black
+              hover:bg-black hover:text-white
+              ease-in-out
+              duration-300
+            "
+          >
             Check the latest COVID-19 updates and messages
             <div>
               <svg
@@ -105,7 +169,9 @@ mounted() {
           </a>
           <div class="p-5">
             <a href="#">
-              <span class="main-card-heading">City of Government COVID-19 Guidance Update</span>
+              <span class="main-card-heading"
+                >City of Government COVID-19 Guidance Update</span
+              >
             </a>
             <p class="main-card-date">March 1, 2022</p>
             <a href="#" id="TheButton1" class="main-card-b">
@@ -155,6 +221,7 @@ mounted() {
         </div>
       </div>
     </div>
+    <div></div>
   </main>
 </template>
 
@@ -217,7 +284,7 @@ mounted() {
   stroke-dashoffset: -1120;
 }
 .text {
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed";
   font-size: 22px;
   line-height: 32px;
   letter-spacing: 8px;

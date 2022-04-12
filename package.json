@@ -11,9 +11,11 @@
     "test:unit:ci": "cypress run-ct --quiet --reporter spec"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "chart.js": "^3.7.1",
     "dayjs": "^1.11.0",
     "jquery": "^3.6.0",
+    "newsapi": "^2.4.1",
     "smooth-scrollbar": "^8.7.4",
     "vue": "^3.2.31",
     "vue-chartjs": "^4.0.5",

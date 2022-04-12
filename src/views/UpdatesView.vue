@@ -1,10 +1,11 @@
 <script setup>
+import NewsPageView from '../components/pages/NewsViewPage.vue'
 </script>
 
 <template>
-  <div>
-    <h1>Hello, World!</h1>  </div>
+  <header></header>
+  <main>
+    <NewsPageView />
+  </main>
+  <footer></footer>
 </template>
-
-<style scoped>
-</style>

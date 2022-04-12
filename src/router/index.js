@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import InsightsView from '../views/InsightsView.vue'
+import InsightsView from '../views/UpdatesView.vue'
 import HealthWellbeingView from '../views/HealthWellbeingView.vue'
 import UpdatesView from '../views/UpdatesView.vue'
 import AboutView from '../views/AboutsView.vue'

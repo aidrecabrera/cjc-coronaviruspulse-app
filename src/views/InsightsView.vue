@@ -1,9 +1,11 @@
 <script setup>
+import HomeViewPage from '../components/pages/HomeViewPage.vue'
 </script>
 
 <template>
   <div>
-    <h1>Hello, World!</h1>  </div>
+    <HomeViewPage />
+  </div>
 </template>
 
 <style scoped>

@@ -9,14 +9,14 @@ export default {
   data() {
     return {
       nowUpdatedDate: '',
-      nowUpdateTime: ''
+      nowUpdateTime: '',
     }
   },
   async created() {
     await axios.get('https://covid19-api-philippines.herokuapp.com/api/summary').then(response => {
       this.nowUpdatedDate = dayjs(response.data.last_update).format('dddd, MMMM D, YYYY')
       this.nowUpdatedTime = dayjs(response.data.last_update).format('h:mm A')
-
+      console.log(response.data.data.total);
       console.log(dayjs(response.data.last_update).format('h:mm A'))
     })
   }
@@ -44,7 +44,8 @@ export default {
         <TheLineSummaryCovidDashboard />
         <CovidChartSummary />
       </div>
-    </div> </main>
+    </div>
+  </main>
 </template>
 
 <style scoped>
