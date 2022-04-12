@@ -94,6 +94,7 @@ export default {
       </div>
     </div>
     <RouterView />  </main>
+    
 </template>
 
 <style>
