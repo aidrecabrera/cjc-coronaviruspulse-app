@@ -4,7 +4,7 @@ import TheDigosSummaryVax from '../page-cards/main/TheDigosSummaryVax.vue';
 import TheDigosAlertLevelBoard from '../page-cards/main/TheDigosAlertLevelBoard.vue';
 import TheHealthAndWellbeing from '../page-cards/main/TheHealthAndWellbeing.vue';
 import TheCovidUpdatesVue from '../page-cards/main/TheCovidUpdates.vue';
-import TheNewsUpdatesComponentVue from '../page-cards/updates/TheNewsUpdatesComponent.vue';
+import TheNewsUpdatesComponentVue from '../page-cards/main/TheNewsUpdatesComponent.vue';
 </script>
 
 <template>

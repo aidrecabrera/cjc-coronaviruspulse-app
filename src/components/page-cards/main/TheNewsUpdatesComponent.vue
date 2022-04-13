@@ -113,7 +113,7 @@ export default {
         page: '1',
       },
       headers: {
-        'x-api-key': 'idjeGtEPBWHUTVvKQp4KBpysFnXdJTiKO8PmKwQdJbM'
+        //'x-api-key': 'idjeGtEPBWHUTVvKQp4KBpysFnXdJTiKO8PmKwQdJbM'
       }
     }).then(response => {
       this.RetrievedJSON = response.data.articles;

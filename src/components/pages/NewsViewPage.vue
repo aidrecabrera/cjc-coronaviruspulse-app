@@ -1,5 +1,5 @@
 <script setup>
-import TheNewsUpdatesComponentVue from "../page-cards/updates/TheNewsUpdatesComponent.vue";
+import TheNewsUpdatesComponentVue from "../page-cards/main/TheNewsUpdatesComponent.vue";
 </script>
 
 <template>

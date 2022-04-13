@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import home from '../views/HomeView.vue'
-import covidinsights from '../views/InsightsView.vue'
-import covidhealth from '../views/HealthWellbeingView.vue'
-import covidupdates from '../views/UpdatesView.vue'
-import about from '../views/AboutsView.vue'
+import home from '../views/TheHomeView.vue'
+import covidinsights from '../views/TheInsightsView.vue'
+import covidhealth from '../views/TheHealthWellbeingView.vue'
+import covidupdates from '../views/TheUpdatesView.vue'
+import about from '../views/TheAboutsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
