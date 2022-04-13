@@ -1,0 +1,121 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "cypress": {
+      "name": "cypress",
+      "isOrdered": true,
+      "folders": {
+        "fixtures": {
+          "name": "fixtures",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "integration": {
+          "name": "integration",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "plugins": {
+          "name": "plugins",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "support": {
+          "name": "support",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {}
+    },
+    "dist": {
+      "name": "dist",
+      "isOrdered": true,
+      "folders": {
+        "assets": {
+          "name": "assets",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {}
+    },
+    "public": {
+      "name": "public",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "src": {
+      "name": "src",
+      "isOrdered": true,
+      "folders": {
+        "assets": {
+          "name": "assets",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "components": {
+          "name": "components",
+          "isOrdered": true,
+          "folders": {
+            "dashboard-charts": {
+              "name": "dashboard-charts",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "icons": {
+              "name": "icons",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "page-cards": {
+              "name": "page-cards",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "pages": {
+              "name": "pages",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "__tests__": {
+              "name": "__tests__",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            }
+          },
+          "files": {}
+        },
+        "router": {
+          "name": "router",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "views": {
+          "name": "views",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {}
+    }
+  },
+  "files": {
+    "README": 0
+  }
+}

@@ -12,12 +12,12 @@
                 <div id="info" class="row-span-3 box bg-slate-500">
                   <img v-bind:src="item.media" alt="">
                 </div>
-                <div id="imgcontainer" class="row-span-1 box bg-pink-700">
+                <div id="imgContainer" class="row-span-1 box bg-pink-700">
                   <h1 class="p-5">
                     {{ item.title }}
                   </h1>
                 </div>
-                <div id="imgcontainer" class="row-span-2 box bg-pink-700">
+                <div id="imgContainer" class="row-span-2 box bg-pink-700">
                   <div class="p-2 grid overflow-hidden grid-cols-1 grid-rows-2">
                     <div class="p-5 row-span-1 bg-slate-300 box">datePublishedParsed
                       <span>{{ item.summary }}</span>

@@ -1,13 +1,13 @@
 <script setup>
-import NewsPageView from '../components/pages/NewsViewPage.vue'
+import UpdatesViewVue from '../components/pages/UpdatesView.vue';
 </script>
 
 <template>
   <header>
-    
+
   </header>
   <main>
-    <NewsPageView />
+    <UpdatesViewVue />
   </main>
   <footer></footer>
 </template>

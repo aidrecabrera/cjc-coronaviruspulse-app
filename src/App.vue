@@ -1,4 +1,8 @@
 <script setup>
+// Dear Future Aidre.
+// Please forgive me. 
+// I can't even begin to
+// express how sorry I am.
 import { RouterLink, RouterView } from 'vue-router';
 </script>
 
