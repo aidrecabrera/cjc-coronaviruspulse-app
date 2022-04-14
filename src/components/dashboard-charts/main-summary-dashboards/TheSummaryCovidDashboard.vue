@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="item w-full h-auto">
     <Bar :chart-options="chartOptions" :chart-data="chartData" :chart-id="chartId" :dataset-id-key="datasetIdKey"
-      :plugins="plugins" :css-classes="cssClasses" :styles="styles" :width="width" :height="height"/></div>
+      :plugins="plugins" :css-classes="cssClasses" :styles="styles" :width="width" :height="height" />
+  </div>
+
 </template>
 
 <script>
@@ -12,13 +14,22 @@ import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, Li
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 export default {
   setup() {
-    return {}
+    return {
+      NowCases: '',
+    }
+  },
+  async created() {
+    await axios({
+      method: 'get',
+      url: 'https://corona.lmao.ninja/v2/historical/PH?lastdays=1',
+      headers: {}
+    }).then(response => {
+      let TodayCases = Object.values(response.data.timeline.cases);
+      this.NowCases = TodayCases[0];
+      console.log(this.NowCases);
+    })
   },
   // COVID-19 Data Summary
-  async created() {
-    const { data } = await axios.get('https://covid19-api-philippines.herokuapp.com/api/summary');
-    console.log(data)
-  },
   name: 'BarChart',
   components: { Bar },
   props: {
@@ -32,11 +43,11 @@ export default {
     },
     width: {
       type: Number,
-      default: 400
+      default: 300
     },
     height: {
       type: Number,
-      default: 170
+      default: 100
     },
     cssClasses: {
       default: '',
