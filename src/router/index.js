@@ -12,7 +12,7 @@ const router = createRouter({
     },
     {
       path: '/home',
-      name: 'home',
+      name: 'Home',
       component: home,
       meta: {
         title: 'Home - COVID Pulse | Digos City Coronavirus Resource Center'
@@ -20,7 +20,7 @@ const router = createRouter({
     },
     {
       path: '/covidinsights',
-      name: 'covidinsights',
+      name: 'CovidInsights',
       component: covidinsights,
       meta: {
         title: 'Insights - COVID Pulse | Digos City Coronavirus Resource Center'
@@ -28,7 +28,7 @@ const router = createRouter({
     },
     {
       path: '/covidhealth',
-      name: 'covidhealth',
+      name: 'CovidHealth',
       component: covidhealth,
       meta: {
         title: 'Health & Wellbeing - COVID Pulse | Digos City Coronavirus Resource Center'
@@ -36,7 +36,7 @@ const router = createRouter({
     },
     {
       path: '/covidupdates',
-      name: 'covidupdates',
+      name: 'CovidUpdates',
       component: covidupdates,
       meta: {
         title: 'COVID-19 Updates - COVID Pulse | Digos City Coronavirus Resource Center'
