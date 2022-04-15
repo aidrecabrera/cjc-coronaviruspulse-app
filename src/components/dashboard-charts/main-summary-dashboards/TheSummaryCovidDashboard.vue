@@ -36,10 +36,10 @@ export default {
       }),
         console.log("Hello");
       console.log(this.arrConfirmedCasesPH);
-      console.log(this.arrConfirmedCasesPH[0].date);
+      console.log(this.arrConfirmedCasesPH[0].Date);
     })
   },
-  // ChartJS COVID-19 Data Summary
+  // COVID-19 Data Summary
   name: 'BarChart',
   components: { Bar },
   props: {
