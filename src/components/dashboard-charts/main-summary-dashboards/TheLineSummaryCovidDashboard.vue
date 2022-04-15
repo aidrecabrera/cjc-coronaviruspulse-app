@@ -1,17 +1,18 @@
 <template>
-  <main>
-    <canvas id="myChart" width="400" height="150"></canvas>
-  </main>
+  <div>
+
+  </div>
 </template>
 
 <script>
-import axios from 'axios';
-import dayjs from 'dayjs';
-import Chart from 'chart.js/auto';
 export default {
   setup() {
+    return {}
+  },
+  data() {
     return {
       arrConfirmedCasesPH: [],
+      dateCovidCases: [],
     }
   },
   async created() {
@@ -27,41 +28,11 @@ export default {
         const {
           Cases,
         } = individualDate;
-        this.arrConfirmedCasesPH.push({ date, total: Cases });
+        this.arrConfirmedCasesPH.push({ total: Cases });
+        this.dateCovidCases.push({ Confirmed: date });
+
       })
-      //   console.log("Hello");
-      // console.log(this.arrConfirmedCasesPH);
-      // console.log(this.arrConfirmedCasesPH[0].date);
     })
-  },
-  methods() {
-    const ctx = document.getElementById('myChart');
-    const ChartDateLabel = this.arrConfirmedCasesPH;
-    console.log(this.arrConfirmedCasesPH);
-    const myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ChartDateLabel,
-        datasets: [{
-          label: 'Confirmed COVID-19 Cases in the Philippines',
-          data: [2, 19, 3, 5, 2, 3],
-          backgroundColor: [
-            'rgba(88, 44, 63, 255)'
-          ],
-          borderColor: [
-            'rgba(88,44,63,255)'
-          ],
-          borderWidth: 2
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      },
-    });
   }
 }
 </script>
