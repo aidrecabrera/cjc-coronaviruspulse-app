@@ -27,6 +27,10 @@ export default {
 }
 </script>
 
+<script setup>
+import TheLineSummaryCovidDashboardVue from '../../dashboard-charts/main-summary-dashboards/TheLineSummaryCovidDashboard.vue';
+</script>
+
 <template>
   <main class="relative flex flex-wrap items-center justify-between my-0 pt-5 bg-white text-black">
     <div class="container flex-wrap mx-auto px-32 items-center">
