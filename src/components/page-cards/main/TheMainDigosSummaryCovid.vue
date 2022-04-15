@@ -38,7 +38,6 @@ export default {
       console.log(this.NowCases);
       console.log(this.WeeklyCases);
       console.log(response.data[response.data.length - 7].Cases);
-      console.log(response);
 
 
       // let TodayCases = Object.values(response.data.timeline.cases);

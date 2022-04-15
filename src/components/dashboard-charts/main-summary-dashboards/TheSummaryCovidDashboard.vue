@@ -10,26 +10,36 @@
 import axios from 'axios'
 import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+import dayjs from 'dayjs'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 export default {
   setup() {
     return {
-      NowCases: '',
+      arrConfirmedCasesPH: [],
     }
   },
   async created() {
     await axios({
       method: 'get',
-      url: 'https://corona.lmao.ninja/v2/historical/PH?lastdays=1',
+      url: 'https://api.covid19api.com/country/philippines/status/confirmed',
       headers: {}
     }).then(response => {
-      // let TodayCases = Object.values(response.data.timeline.cases);
-      // this.NowCases = TodayCases[0];
-      // console.log(this.NowCases);
+      // This is for Object Destructuring the retrieved data from COVID-19 API
+      let dailyCases = response.data
+      dailyCases.forEach(individualDate => {
+        const date = dayjs(individualDate.Date, "YYYYMMDD").format("MM/DD");
+        const {
+          Cases,
+        } = individualDate;
+        this.arrConfirmedCasesPH.push({ date, total: Cases });
+      }),
+        console.log("Hello");
+      console.log(this.arrConfirmedCasesPH);
+      console.log(this.arrConfirmedCasesPH[0].date);
     })
   },
-  // COVID-19 Data Summary
+  // ChartJS COVID-19 Data Summary
   name: 'BarChart',
   components: { Bar },
   props: {
