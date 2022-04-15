@@ -118,17 +118,36 @@ export default {
   async created() {
     await axios({
       method: 'GET',
-      url: 'https://api.newscatcherapi.com/v2/search',
+      // url: 'https://api.newscatcherapi.com/v2/search',
+      url: 'https://covid-19-news.p.rapidapi.com/v1/covid',
+      // params: {
+      //   q: 'covid',
+      //   lang: 'en',
+      //   sort_by: 'relevancy',
+      //   countries: 'PH',
+      //   page: "25",
+      //   page_size: "25",
+      // },
+      // params: {
+      //   q: 'covid',
+      //   lang: 'en',
+      //   media: 'True'
+      // },
+      // headers: {
+      //   // 'x-api-key': 'toIzlMTAZVFDwzritj0ILnH1e1O1471htDcWCnlHjdw'
+      //   'X-RapidAPI-Host': 'covid-19-news.p.rapidapi.com',
+      //   'X-RapidAPI-Key': '219b425ab4msh2bb05f0b18c4f30p1057fdjsnc65dc852e2d7'
+      // }
       params: {
-        q: '(((COVID-19) || (Vaccination)))',
+        q: 'covid',
         lang: 'en',
         sort_by: 'relevancy',
-        countries: 'PH',
-        page: "25",
-        page_size: "25",
+        country: 'PH',
+        media: 'True'
       },
       headers: {
-        //'x-api-key': 'toIzlMTAZVFDwzritj0ILnH1e1O1471htDcWCnlHjdw'
+        'X-RapidAPI-Host': 'covid-19-news.p.rapidapi.com',
+        'X-RapidAPI-Key': '4654f7147bmsha14fefd6aba622ep12dcb9jsne9b3877e70a2'
       }
     }).then(response => {
       this.MainArticleJSON = response.data.articles[0];

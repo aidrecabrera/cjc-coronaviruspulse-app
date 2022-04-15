@@ -30,7 +30,6 @@ export default {
         } = individualDate;
         this.arrConfirmedCasesPH.push({ total: Cases });
         this.dateCovidCases.push({ Confirmed: date });
-
       })
     })
   }
