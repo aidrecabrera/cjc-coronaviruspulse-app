@@ -2,10 +2,9 @@
 import axios from 'axios'
 import dayjs from 'dayjs'
 import CovidChartSummary from '../../dashboard-charts/main-summary-dashboards/TheSummaryCovidDashboard.vue'
-import TheLineSummaryCovidDashboard from '../../dashboard-charts/main-summary-dashboards/TheLineSummaryCovidDashboard.vue'
 export default {
   name: 'Chart',
-  components: { CovidChartSummary, TheLineSummaryCovidDashboard },
+  components: { CovidChartSummary },
   data() {
     return {
       nowUpdatedDate: '',
@@ -32,30 +31,9 @@ export default {
       // This is to get the latest data of Philippine COVID-19 information
       let latestCovidInfo = response.data[response.data.length - 1];
       this.WeeklyCases = ((response.data[response.data.length - 1].Cases) - (response.data[response.data.length - 7].Cases)).toLocaleString('en-US');
-
       this.NowCases = latestCovidInfo.Cases.toLocaleString('en-US')
-      console.log(latestCovidInfo);
-      console.log(this.NowCases);
-      console.log(this.WeeklyCases);
-      console.log(response.data[response.data.length - 7].Cases);
-
-
-      // let TodayCases = Object.values(response.data.timeline.cases);
-      // this.NowCases = TodayCases[0];
-      // console.log(this.NowCases);
     })
   },
-  // async created() {
-  //   await axios({
-  //     method: 'get',
-  //     url: 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/covid-19-qppza/service/REST-API/incoming_webhook/countries_summary?country_iso3=PHL&min_date=PHL&max_date=2027-04-27T00:00:00.000Z&hide_fields=_id,%20combined_names,%20country_codes,%20country_iso2s',
-  //     headers: {}
-  //   }).then(response => {
-  //     let Last7DCases = Object.values(response.data.timeline.cases);
-  //     this.WeeklyCases = Last7DCases[6] - Last7DCases[0];
-  //     console.log(this.WeeklyCases);
-  //   })
-  // }
 }
 </script>
 
@@ -77,23 +55,6 @@ export default {
         </p>
       </div>
       <div class="pt-5">
-        <div>
-          <!-- <div class="flex justify-center items-center space-x-3 w-full">
-            <div class="item h-auto">
-              <div class="flex flex-col justify-center w-full">
-                <div class="item w-auto h-auto bg-red py-3">
-                  <div class=" text-white bg-black py-16 px-16">
-                    <h1 class=" font-sans text-2xl">  </h1>
-                  </div>
-                </div>
-                <div class=" bg-pink-700 item w-auto py-16 px-16">
-
-                </div>
-              </div>
-            </div>
-
-          </div> -->
-        </div>
         <div class=" flex flex-col gap-3">
           <div class="flex flex-row gap-2">
             <h1 class=" font-extrabold text-2xl">COVID-19 Cases Last 7 days:</h1>
@@ -104,8 +65,6 @@ export default {
             <h1 class=" text-2xl">{{ NowCases }}</h1>
           </div>
         </div>
-
-        <!-- <TheLineSummaryCovidDashboard /> -->
         <CovidChartSummary />
       </div>
       <!-- <iframe class=" w-full h-screen"

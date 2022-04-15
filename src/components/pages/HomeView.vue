@@ -8,6 +8,7 @@ import TheMainCovidUpdates from '../page-cards/main/TheMainCovidUpdates.vue';
 
 <template>
   <main>
+    
     <TheMainDigosSummaryCovid />
     <TheMainDigosSummaryVax />
     <TheDigosAlertLevelBoard />
