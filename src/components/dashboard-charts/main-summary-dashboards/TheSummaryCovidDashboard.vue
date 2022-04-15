@@ -1,18 +1,13 @@
 <template>
-  <main>
-    <line-chart :chartData="arrConfirmedCasesPH" :options="chartOptions" label="Positive"></line-chart>
-  </main>
+  Test
+  <Bar :chart-data="chartData" />
 </template>
 
 <script>
 import axios from 'axios'
-
 import LineChart from '../main-summary-dashboards/TheCovidDailyChart.vue'
-
-import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 import dayjs from 'dayjs'
 
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 export default {
   components: {
     LineChart
@@ -45,7 +40,23 @@ export default {
       console.log(this.arrConfirmedCasesPH);
       console.log(this.arrConfirmedCasesPH[0].date);
     })
-  }
+  },
+  name: 'BarChart',
+  components: { Bar },
+  data() {
+    return {
+      chartData: {
+        labels: ['January', 'February', 'March'],
+        datasets: [
+          {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [40, 20, 12]
+          }
+        ]
+      }
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>
