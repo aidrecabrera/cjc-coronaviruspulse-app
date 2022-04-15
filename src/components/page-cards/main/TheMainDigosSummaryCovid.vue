@@ -14,36 +14,37 @@ export default {
       WeeklyCases: '',
     }
   },
-  async created() {
-    await axios.get('https://covid19-api-philippines.herokuapp.com/api/summary').then(response => {
-      this.nowUpdatedDate = dayjs(response.data.last_update).format('dddd, MMMM D, YYYY')
-      this.nowUpdatedTime = dayjs(response.data.last_update).format('h:mm A')
-      console.log(response.data.data.total);
-      console.log(dayjs(response.data.last_update).format('h:mm A'))
-    })
-  },
-  async created() {
-    await axios({
-      method: 'get',
-      url: 'https://corona.lmao.ninja/v2/historical/PH?lastdays=1',
-      headers: {}
-    }).then(response => {
-      let TodayCases = Object.values(response.data.timeline.cases);
-      this.NowCases = TodayCases[0];
-      console.log(this.NowCases);
-    })
-  },
+  // async created() {
+  //   await axios.get('https://covid19-api-philippines.herokuapp.com/api/summary').then(response => {
+  //     this.nowUpdatedDate = dayjs(response.data.last_update).format('dddd, MMMM D, YYYY')
+  //     this.nowUpdatedTime = dayjs(response.data.last_update).format('h:mm A')
+  //     console.log(response.data.data.total);
+  //     console.log(dayjs(response.data.last_update).format('h:mm A'))
+  //   })
+  // },
   async created() {
     await axios({
       method: 'get',
-      url: 'https://corona.lmao.ninja/v2/historical/PH?lastdays=7',
+      url: 'https://api.covid19api.com/country/philippines/status/confirmed',
       headers: {}
     }).then(response => {
-      let Last7DCases = Object.values(response.data.timeline.cases);
-      this.WeeklyCases = Last7DCases[6] - Last7DCases[0];
-      console.log(this.WeeklyCases);
+      console.log(response);
+      // let TodayCases = Object.values(response.data.timeline.cases);
+      // this.NowCases = TodayCases[0];
+      // console.log(this.NowCases);
     })
-  }
+  },
+  // async created() {
+  //   await axios({
+  //     method: 'get',
+  //     url: 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/covid-19-qppza/service/REST-API/incoming_webhook/countries_summary?country_iso3=PHL&min_date=PHL&max_date=2027-04-27T00:00:00.000Z&hide_fields=_id,%20combined_names,%20country_codes,%20country_iso2s',
+  //     headers: {}
+  //   }).then(response => {
+  //     let Last7DCases = Object.values(response.data.timeline.cases);
+  //     this.WeeklyCases = Last7DCases[6] - Last7DCases[0];
+  //     console.log(this.WeeklyCases);
+  //   })
+  // }
 }
 </script>
 
@@ -96,12 +97,38 @@ export default {
         <!-- <TheLineSummaryCovidDashboard /> -->
         <CovidChartSummary />
       </div>
-      <iframe class=" w-full h-screen"
+      <!-- <iframe class=" w-full h-screen"
         src="https://app.powerbi.com/view?r=eyJrIjoiYWRiZWVkNWUtNmM0Ni00MDAwLTljYWMtN2EwNTM3YjQzYmRmIiwidCI6ImY2MTBjMGI3LWJkMjQtNGIzOS04MTBiLTNkYzI4MGFmYjU5MCIsImMiOjh9"
         frameborder="0"></iframe>
+      <div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0"
+          marginwidth="0" title="COVID-19"
+          src="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"></iframe></div> -->
     </div>
   </main>
 </template>
 
-<style scoped>
+<style>
+.embed-container {
+  position: relative;
+  padding-bottom: 80%;
+  height: 0;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+small {
+  position: absolute;
+  z-index: 40;
+  bottom: 0;
+  margin-bottom: -15px;
+}
 </style>
