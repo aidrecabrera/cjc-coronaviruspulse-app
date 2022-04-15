@@ -28,7 +28,19 @@ export default {
       url: 'https://api.covid19api.com/country/philippines/status/confirmed',
       headers: {}
     }).then(response => {
+      // Selecting the last element of the COVID-19 API response 
+      // This is to get the latest data of Philippine COVID-19 information
+      let latestCovidInfo = response.data[response.data.length - 1];
+      this.WeeklyCases = ((response.data[response.data.length - 1].Cases) - (response.data[response.data.length - 7].Cases)).toLocaleString('en-US');
+
+      this.NowCases = latestCovidInfo.Cases.toLocaleString('en-US')
+      console.log(latestCovidInfo);
+      console.log(this.NowCases);
+      console.log(this.WeeklyCases);
+      console.log(response.data[response.data.length - 7].Cases);
       console.log(response);
+
+
       // let TodayCases = Object.values(response.data.timeline.cases);
       // this.NowCases = TodayCases[0];
       // console.log(this.NowCases);
@@ -86,11 +98,11 @@ export default {
         <div class=" flex flex-col gap-3">
           <div class="flex flex-row gap-2">
             <h1 class=" font-extrabold text-2xl">COVID-19 Cases Last 7 days:</h1>
-            <span class=" text-2xl">{{ this.WeeklyCases.toLocaleString('en-US') }}</span>
+            <span class=" text-2xl">{{ WeeklyCases }}</span>
           </div>
           <div class="flex flex-row gap-2">
             <h1 class=" font-extrabold text-2xl">Total COVID-19 Cases:</h1>
-            <h1 class=" text-2xl">{{ this.NowCases.toLocaleString('en-US') }}</h1>
+            <h1 class=" text-2xl">{{ NowCases }}</h1>
           </div>
         </div>
 

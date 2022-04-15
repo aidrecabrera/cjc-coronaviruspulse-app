@@ -24,9 +24,9 @@ export default {
       url: 'https://corona.lmao.ninja/v2/historical/PH?lastdays=1',
       headers: {}
     }).then(response => {
-      let TodayCases = Object.values(response.data.timeline.cases);
-      this.NowCases = TodayCases[0];
-      console.log(this.NowCases);
+      // let TodayCases = Object.values(response.data.timeline.cases);
+      // this.NowCases = TodayCases[0];
+      // console.log(this.NowCases);
     })
   },
   // COVID-19 Data Summary
