@@ -56,6 +56,7 @@ export default {
           </div>
         </div>
       </div>
+      <TheLineSummaryCovidDashboardVue />
       <!-- <iframe class=" w-full h-screen"
         src="https://app.powerbi.com/view?r=eyJrIjoiYWRiZWVkNWUtNmM0Ni00MDAwLTljYWMtN2EwNTM3YjQzYmRmIiwidCI6ImY2MTBjMGI3LWJkMjQtNGIzOS04MTBiLTNkYzI4MGFmYjU5MCIsImMiOjh9"
         frameborder="0"></iframe>
