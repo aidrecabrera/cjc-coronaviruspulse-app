@@ -155,7 +155,6 @@ export default {
       dayjs.extend(relativeTime);
       let dateParsed = dayjs(dateParsing).fromNow('h');
       this.MainArticleJSON.published_date = dateParsed;
-
       this.ListArticleJSON = response.data.articles;
       let dateParsingList = response.data.articles.published_date;
       dayjs.extend(relativeTime);
