@@ -103,11 +103,11 @@
 }
 
 .card-heading {
-	@apply mb-10 text-2xl font-bold tracking-tight text-gray-900 dark: text-yellow;
+	@apply mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-yellow;
 }
 
 .card-paragraph {
-	@apply pr-5 mb-7 font-sans text-gray-700 dark: text-yellow tracking-wide leading-relaxed text-left;
+	@apply pr-5 mb-7 font-sans text-gray-700 dark:text-yellow tracking-wide leading-relaxed text-left;
 }
 
 .card-button {
