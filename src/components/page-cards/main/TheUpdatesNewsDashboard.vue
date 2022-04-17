@@ -60,44 +60,7 @@
           </div>
         </article>
       </div>
-
-      <!-- <div v-for="(info, index) in this.ListArticleJSON" class="box"><a href="#"
-        class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-        <img class=" ml-5 object-cover w-72 h-full rounded-xl" :src="info.media" alt="">
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> {{ info.title }} </h5>
-          <p class=" mb-3 font-bold text-gray-700 dark:text-gray-400"> {{ ListArticleJSON.published_date }} </p>
-          <p class=" mb-3 font-normal text-gray-700 dark:text-gray-400"> </p>
-        </div>
-      </a>
-    </div> -->
-
-      <!-- <div class=" mx-72">
-      <div class="flex flex-wrap -mx-3 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2 xl:-mx-2">
-
-      </div>
-    </div>
-
-    <div class="grid overflow-hidden grid-cols-2 auto-rows-auto gap-2 w-full">
-      <div class="box">
-        <div
-          class="my-3 px-3 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/2 md:my-2 md:px-2 md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 xl:my-2 xl:px-2 xl:w-1/2">
-          <div v-for="(info, index) in this.ListArticleJSON" class="box"><a href="#"
-              class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-              <img class=" ml-5 object-cover w-72 h-full rounded-xl" :src="info.media" alt="">
-              <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> {{ info.title }}
-                </h5>
-                <p class=" mb-3 font-bold text-gray-700 dark:text-gray-400"> {{ ListArticleJSON.published_date }} </p>
-                <p class=" mb-3 font-normal text-gray-700 dark:text-gray-400"> </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
+      
     </div>
   </main>
 
@@ -164,8 +127,6 @@ export default {
       console.log(this.ListArticleJSON.published_date);
       this.ListArticleJSON.splice(0, 1);
       console.log(this.ListArticleJSON);
-      // console.log(this.MainArticleJSON);
-      // console.log(this.ListArticleJSON);
     })
   },
   methods: {
