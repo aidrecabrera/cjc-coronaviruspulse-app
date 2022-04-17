@@ -111,6 +111,6 @@
 }
 
 .card-button {
-	@apply focus: ring-0 ease-in duration-300 inline-flex items-center py-2 pr-3 text-sm font-medium text-center text-white rounded-lg hover:bg-red hover:text-white hover:pl-3 hover:pr-3 focus:outline-none focus:ring-red dark:text-yellow;
+	@apply focus:ring-0 ease-in duration-300 inline-flex items-center py-2 pr-3 text-sm font-medium text-center text-white rounded-lg hover:bg-red hover:text-white hover:pl-3 hover:pr-3 focus:outline-none focus:ring-red dark:text-yellow;
 }
 </style>
