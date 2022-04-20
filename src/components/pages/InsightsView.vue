@@ -2,8 +2,25 @@
   <main>
     <div class="relative flex flex-wrap items-center justify-between my-0 pt-5 bg-white text-black">
       <div class="container flex-wrap mx-auto px-32 items-center">
+        <!-- Headline -->
+        <div class="mb-7 border-4 border-black">
+          <div class="py-5 pt-20 my-b ">
+            <h2 class=" my-2  text-black font-sans font-extrabold text-7xl">COVID-19 Insights</h2>
+            <p class=" text-black pt-2 font-sans tracking-normal text-2xl">Get the
+              latest COVID-19 related news and
+              updates from various
+              media
+              outlets.
+            </p>
+          </div>
+        </div>
+
+        <div class="embed-container">
+          <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            title="COVID-19"
+            src="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"></iframe>
+        </div>
         <div>
-          <h1>JHU CSSE COVID-19 Dashboard</h1>
           <p>The COVID-19 Dashboard is maintained by Center for Systems Science and Engineering (CSSE) from Johns
             Hopkins
             University (JHU). The COVID-19 data is sourced from the repository for the 2019 Novel Coronavirus Visual
@@ -12,12 +29,6 @@
             Physics
             Lab (JHU APL).</p>
         </div>
-        <div class="embed-container">
-          <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-            title="COVID-19"
-            src="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"></iframe>
-        </div>
-        <h1>COVID-19 Dashboards from World Health Organization</h1>
         <div>
           <iframe class="w-full h-screen"
             src="https://app.powerbi.com/view?r=eyJrIjoiYWRiZWVkNWUtNmM0Ni00MDAwLTljYWMtN2EwNTM3YjQzYmRmIiwidCI6ImY2MTBjMGI3LWJkMjQtNGIzOS04MTBiLTNkYzI4MGFmYjU5MCIsImMiOjh9"
@@ -206,7 +217,7 @@ export default {
 
 <style scoped>
 h1 {
-  @apply text-2xl font-bold;
+  @apply text-xl font-bold mb-3;
 }
 
 h3 {
@@ -214,10 +225,14 @@ h3 {
 }
 
 p {
-  @apply text-justify;
+  @apply text-justify mb-3;
 }
 
 a {
   @apply text-slate-500 underline font-bold;
+}
+
+div {
+  @apply mb-5;
 }
 </style>

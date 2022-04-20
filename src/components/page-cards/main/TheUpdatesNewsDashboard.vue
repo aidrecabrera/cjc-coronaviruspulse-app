@@ -1,10 +1,10 @@
 <template>
-  <main class="" style="background-color: #2c8a8d;">
+  <main class=" color " style=" background-color: #0D1321;">
     <div>
       <!-- Headline -->
       <div class="mb-7 mx-72">
         <div class="py-5 pt-20 my-b ">
-          <h1 class=" my-2  text-black font-sans font-extrabold text-7xl">COVID-19 Updates</h1>
+          <h1 class=" my-2  text-white font-sans font-extrabold text-7xl">COVID-19 Updates</h1>
           <p class=" text-white pt-2 font-sans tracking-normal text-2xl">Get the latest COVID-19 related news and
             updates from various
             media
@@ -13,29 +13,6 @@
         </div>
         <hr>
       </div>
-
-      <!-- <article class="my-7 p-10 bg-white mx-72 hover:bg-amber-100 duration-700 ease-in-out">
-      <div class="grid grid-rows-1 grid-flow-col">
-        <div class=" pb-5 col-span-2">
-          <h5 @click="navTo(MainArticleJSON.link)" class="leading-tight cursor-pointer text-5xl font-bold text-red">
-            {{
-              MainArticleJSON.title
-            }}</h5>
-        </div>
-        <div class="item row-span-1 col-span-2">
-          <p class=" text-ellipsis text-justify font-medium text-gray-700 ">{{
-            MainArticleJSON.summary
-          }}</p>
-          <h1 class=" pt-5 font-bold text-black"> {{ MainArticleJSON.published_date }} ago</h1>
-        </div>
-
-        <div class=" align-top ml-10 row-span-2 col-span-1 w-144">
-          <img class="object-cover" v-bind:src="MainArticleJSON.media" alt="">
-        </div>
-      </div>
-    </article> -->
-
-      <!-- List Articles -->
 
       <div class=" pb-10 ">
         <article v-for="(listArticleInfo, index) in this.ListArticleJSON"
@@ -60,6 +37,8 @@
           </div>
         </article>
       </div>
+
+
 
     </div>
   </main>
