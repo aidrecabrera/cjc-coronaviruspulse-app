@@ -18,14 +18,47 @@
         <div>
           <h1>Digos City Facility Status</h1>
           <div class=" bg-purple-500">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-6 py-3">
+                      Hospital
+                    </th>
+                    <th scope="col" class="py-3">
+                      Confined Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody v-for="Hospital in this.HospitalInformationObjects">
+                  <tr class="border-b bg-red">
+                    <th scope="row" class="font-bold text-xl pl-6 py-4 text-white ">
+                      {{ Hospital.name }}
+                    </th>
+                    <td>
+                      <div>
+                        <ul class=" text-ellipsis text-justify font-medium text-white ">
+                          <li>Asymptomatic Case: {{ Hospital.confinedAsymptomatic }}</li>
+                          <li>Mild Case: {{ Hospital.confinedMild }}</li>
+                          <li>Severe Case: {{ Hospital.confinedSevere }}</li>
+                          <li>Death Case: {{ Hospital.confinedDied }}</li>
+                          <li>Discharged Patient:{{ Hospital.discharged }}</li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <article v-for="Hospital in this.HospitalInformationObjects"
-              class=" place-content-center align-middle my-7 hover:border-1 border hover:border-black border-transparent bg-white hover:bg-amber-100 duration-700 ease-in-out">
+              class=" pt-7 px-7 place-content-center align-middle my-7 hover:border-1 border hover:border-black border-transparent bg-white hover:bg-amber-100 duration-700 ease-in-out">
               <div class="grid grid-rows-1 grid-flow-col">
                 <div class="col-span-2">
                   <h5 class="leading-tight cursoHospitalr-pointer text-5xl font-bold text-red">
                     {{ Hospital.name }}
                   </h5>
                 </div>
+
                 <div class="item row-span-1 col-span-2">
                   <ul class=" text-ellipsis text-justify font-medium text-gray-700 ">
                     <li>Asymptomatic Case: {{ Hospital.confinedAsymptomatic }}</li>
@@ -36,7 +69,7 @@
                   </ul>
                 </div>
 
-                <div class=" align-top ml-10 row-span-2 col-span-1 w-144">
+                <div class=" bg-black align-top ml-10 row-span-2 col-span-1 w-72">
                   <img class="object-cover">
                 </div>
               </div>
