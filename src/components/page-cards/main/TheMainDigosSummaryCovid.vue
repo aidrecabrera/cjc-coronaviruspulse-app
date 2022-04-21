@@ -6,7 +6,9 @@ export default {
     return {
       nowUpdatedDate: '',
       NowCases: '',
+      NowDeaths: '',
       WeeklyCases: '',
+      TotalRecovered: '',
     }
   },
   async created() {
@@ -17,12 +19,21 @@ export default {
     }).then(response => {
       // Selecting the last element of the COVID-19 API response 
       // This is to get the latest data of Philippine COVID-19 information
-      let latestCovidInfo = response.data[response.data.length - 1];
+      let latestCovidPH = response.data[response.data.length - 1];
       this.WeeklyCases = ((response.data[response.data.length - 1].Confirmed) - (response.data[response.data.length - 7].Confirmed)).toLocaleString('en-US');
-      this.NowCases = latestCovidInfo.Confirmed.toLocaleString('en-US')
-      this.nowUpdatedDate = dayjs(latestCovidInfo.Date).format('dddd, MMMM D, YYYY')
-      console.log(latestCovidInfo);
+      this.NowCases = latestCovidPH.Confirmed.toLocaleString('en-US')
+      this.NowDeaths = latestCovidPH.Deaths.toLocaleString('en-US')
+      this.nowUpdatedDate = dayjs(latestCovidPH.Date).format('dddd, MMMM D, YYYY')
     }).catch((err) => console.log(err));
+
+    await axios({
+      method: 'get',
+      url: 'https://covidapi.info/api/v1/global',
+      headers: {}
+    }).then(generalResponse => {
+      // let latestCovidGlobal = generalResponse.Global;
+      console.log(generalResponse);
+    })
   },
 }
 </script>
@@ -35,7 +46,7 @@ import TheLineSummaryCovidDashboardVue from '../../dashboard-charts/main-summary
   <main class="relative flex flex-wrap items-center justify-between my-0 pt-5 bg-white text-black">
     <div class="container flex-wrap mx-auto px-32 items-center">
       <div>
-        <h5 class="pt-5">Last updated on {{ this.nowUpdatedDate }} </h5>
+        <h5 class="pt-5">Last updated on {{ nowUpdatedDate }} </h5>
       </div>
       <div>
         <h1 class="mainHeading py-3">Digos City Summary</h1>
@@ -48,7 +59,11 @@ import TheLineSummaryCovidDashboardVue from '../../dashboard-charts/main-summary
           </a>
         </p>
       </div>
-      <div class="pt-5">
+      <div class="pt-2">
+        <div class=" pb-5">
+          <p>As of <b>{{ nowUpdatedDate }}</b>, there have been <b>{{ NowCases }}</b> confirmed cases of COVID-19,
+            including <b>{{ NowDeaths }}</b> deaths, reported by the Department of Health.</p>
+        </div>
         <div class=" flex flex-col gap-3">
           <div class="flex flex-row gap-2">
             <h1 class=" font-extrabold text-2xl">Weekly Cases:</h1>
@@ -60,7 +75,7 @@ import TheLineSummaryCovidDashboardVue from '../../dashboard-charts/main-summary
           </div>
           <div class="flex flex-row gap-2">
             <h1 class=" font-extrabold text-2xl">Deaths:</h1>
-            <h1 class=" text-2xl">{{ NowCases }}</h1>
+            <h1 class=" text-2xl">{{ NowDeaths }}</h1>
           </div>
           <div class="flex flex-row gap-2">
             <h1 class=" font-extrabold text-2xl">Recoveries:</h1>
