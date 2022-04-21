@@ -1,5 +1,6 @@
 <template>
   <main class=" bg-white">
+    <TheInsightsFacilitiesVue />
     <div class="relative flex flex-wrap items-center justify-between  text-black">
       <div class="container flex-wrap mx-72 px-11 pb-32 items-center">
         <!-- Headline -->
@@ -238,6 +239,7 @@
 </template>
 
 <script>
+import TheInsightsFacilitiesVue from "../page-cards/main/TheInsightsFacilities.vue"
 export default {
 }
 </script>

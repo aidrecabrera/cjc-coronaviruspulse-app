@@ -18,6 +18,7 @@
     "jquery": "^3.6.0",
     "newsapi": "^2.4.1",
     "smooth-scrollbar": "^8.7.4",
+    "title-case": "^3.0.3",
     "vue": "^3.2.31",
     "vue-chartjs": "^4.0.5",
     "vue-number-animation": "^1.1.2",

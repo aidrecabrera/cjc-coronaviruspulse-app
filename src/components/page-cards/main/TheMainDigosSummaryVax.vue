@@ -1,11 +1,11 @@
-<script setup>
-const vaccinationPercentage = 63.4;
-const individualDoses = 100;
-const dailyDoses = 40000;
-const dailyDosesCommas = dailyDoses.toLocaleString("en-US");
-const digosVaccinationPercentage = 58;
-const digosTotalVaccines = 80918;
-const digosTotalVaccinesCommas = digosTotalVaccines.toLocaleString("en-US");
+<script>
+export default {
+  data() {
+    return {
+      NowVaccinated: '',
+    }
+  }
+} 
 </script>
 
 <template>

@@ -17,6 +17,7 @@ specifiers:
   smooth-scrollbar: ^8.7.4
   start-server-and-test: ^1.14.0
   tailwindcss: ^3.0.23
+  title-case: ^3.0.3
   vite: ^2.9.1
   vue: ^3.2.31
   vue-chartjs: ^4.0.5
@@ -31,6 +32,7 @@ dependencies:
   jquery: 3.6.0
   newsapi: 2.4.1
   smooth-scrollbar: 8.7.4
+  title-case: 3.0.3
   vue: 3.2.31
   vue-chartjs: 4.0.5_chart.js@3.7.1+vue@3.2.31
   vue-number-animation: 1.1.2
@@ -2199,6 +2201,12 @@ packages:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
     dev: true
 
+  /title-case/3.0.3:
+    resolution: {integrity: sha512-e1zGYRvbffpcHIrnuqT0Dh+gEJtDaxDSoG4JAIpq4oDFyooziLBIiYQv0GBT4FUAnUop5uZ1hiIAj7oAF6sOCA==}
+    dependencies:
+      tslib: 2.3.1
+    dev: false
+
   /tmp/0.2.1:
     resolution: {integrity: sha512-76SUhtfqR2Ijn+xllcI5P1oyannHNHByD80W1q447gU3mp9G9PSpGdWmjUOHRDPiHYacIk66W7ubDTuPF3BEtQ==}
     engines: {node: '>=8.17.0'}
@@ -2231,7 +2239,6 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
-    dev: true
 
   /tunnel-agent/0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}

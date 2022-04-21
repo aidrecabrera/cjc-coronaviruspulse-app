@@ -4,36 +4,28 @@ import dayjs from 'dayjs'
 export default {
   data() {
     return {
-      nowUpdatedDate: '',
       NowCases: '',
       NowDeaths: '',
-      WeeklyCases: '',
-      TotalRecovered: '',
+      NowRecovered: '',
+      nowUpdatedDate: '',
     }
   },
   async created() {
     await axios({
       method: 'get',
-      url: 'https://api.covid19api.com/country/philippines',
-      headers: {}
+      url: 'https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/country-report-iso-based/Philippines/phl',
+      headers: {
+        'X-RapidAPI-Host': 'vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com',
+        'X-RapidAPI-Key': '4654f7147bmsha14fefd6aba622ep12dcb9jsne9b3877e70a2'
+      }
     }).then(response => {
       // Selecting the last element of the COVID-19 API response 
       // This is to get the latest data of Philippine COVID-19 information
-      let latestCovidPH = response.data[response.data.length - 1];
-      this.WeeklyCases = ((response.data[response.data.length - 1].Confirmed) - (response.data[response.data.length - 7].Confirmed)).toLocaleString('en-US');
-      this.NowCases = latestCovidPH.Confirmed.toLocaleString('en-US')
-      this.NowDeaths = latestCovidPH.Deaths.toLocaleString('en-US')
-      this.nowUpdatedDate = dayjs(latestCovidPH.Date).format('dddd, MMMM D, YYYY')
+      let latestCovidPH = response.data[0]
+      this.NowCases = latestCovidPH.TotalCases.toLocaleString('en-US')
+      this.NowDeaths = latestCovidPH.TotalDeaths.toLocaleString('en-US')
+      this.NowUpdatedDate = dayjs(latestCovidPH.Date).format('dddd, MMMM D, YYYY')
     }).catch((err) => console.log(err));
-
-    await axios({
-      method: 'get',
-      url: 'https://covidapi.info/api/v1/global',
-      headers: {}
-    }).then(generalResponse => {
-      // let latestCovidGlobal = generalResponse.Global;
-      console.log(generalResponse);
-    })
   },
 }
 </script>
@@ -62,19 +54,15 @@ export default {
         </div>
         <div class=" flex flex-col gap-3">
           <div class="flex flex-row gap-2">
-            <h1 class=" font-extrabold text-2xl">Weekly Cases:</h1>
-            <span class=" text-2xl">{{ WeeklyCases }}</span>
-          </div>
-          <div class="flex flex-row gap-2">
             <h1 class=" font-extrabold text-2xl">Total Cases:</h1>
             <h1 class=" text-2xl">{{ NowCases }}</h1>
           </div>
           <div class="flex flex-row gap-2">
-            <h1 class=" font-extrabold text-2xl">Deaths:</h1>
+            <h1 class=" font-extrabold text-2xl">Total Deaths:</h1>
             <h1 class=" text-2xl">{{ NowDeaths }}</h1>
           </div>
           <div class="flex flex-row gap-2">
-            <h1 class=" font-extrabold text-2xl">Recoveries:</h1>
+            <h1 class=" font-extrabold text-2xl">Total Recoveries:</h1>
             <h1 class=" text-2xl">{{ NowCases }}</h1>
           </div>
         </div>
