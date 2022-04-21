@@ -1,17 +1,14 @@
 <template>
-  <main>
-    <div class="relative flex flex-wrap items-center justify-between my-0 pt-5 bg-white text-black">
-      <div class="container flex-wrap mx-auto px-32 items-center">
+  <main class="bg-red">
+    <div class="relative flex flex-wrap items-center justify-between  text-black">
+      <div class="container flex-wrap mx-72 px-11 pb-32 items-center bg-white">
         <!-- Headline -->
         <div class="mb-7">
           <div class="py-5 pt-20 my-b ">
             <h2 class=" my-2  text-black font-sans font-extrabold text-7xl">COVID-19 Insights</h2>
-            <p class=" text-black pt-2 font-sans tracking-normal text-2xl">Get the
-              latest COVID-19 related news and
-              updates from various
-              media
-              outlets.
-            </p>
+            <span class=" text-black pt-2 font-sans tracking-normal text-2xl">Get the
+              latest COVID-19 epidemiological insights from various organizations.
+            </span>
           </div>
         </div>
 
