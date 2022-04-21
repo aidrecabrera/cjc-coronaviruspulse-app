@@ -15,68 +15,6 @@
           </div>
         </div>
 
-        <div>
-          <h1>Digos City Facility Status</h1>
-          <div class=" bg-purple-500">
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                  <tr>
-                    <th scope="col" class="px-6 py-3">
-                      Hospital
-                    </th>
-                    <th scope="col" class="py-3">
-                      Confined Status
-                    </th>
-                  </tr>
-                </thead>
-                <tbody v-for="Hospital in this.HospitalInformationObjects">
-                  <tr class="border-b bg-red">
-                    <th scope="row" class="font-bold text-xl pl-6 py-4 text-white ">
-                      {{ Hospital.name }}
-                    </th>
-                    <td>
-                      <div>
-                        <ul class=" text-ellipsis text-justify font-medium text-white ">
-                          <li>Asymptomatic Case: {{ Hospital.confinedAsymptomatic }}</li>
-                          <li>Mild Case: {{ Hospital.confinedMild }}</li>
-                          <li>Severe Case: {{ Hospital.confinedSevere }}</li>
-                          <li>Death Case: {{ Hospital.confinedDied }}</li>
-                          <li>Discharged Patient:{{ Hospital.discharged }}</li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <article v-for="Hospital in this.HospitalInformationObjects"
-              class=" pt-7 px-7 place-content-center align-middle my-7 hover:border-1 border hover:border-black border-transparent bg-white hover:bg-amber-100 duration-700 ease-in-out">
-              <div class="grid grid-rows-1 grid-flow-col">
-                <div class="col-span-2">
-                  <h5 class="leading-tight cursoHospitalr-pointer text-5xl font-bold text-red">
-                    {{ Hospital.name }}
-                  </h5>
-                </div>
-
-                <div class="item row-span-1 col-span-2">
-                  <ul class=" text-ellipsis text-justify font-medium text-gray-700 ">
-                    <li>Asymptomatic Case: {{ Hospital.confinedAsymptomatic }}</li>
-                    <li>Mild Case: {{ Hospital.confinedMild }}</li>
-                    <li>Severe Case: {{ Hospital.confinedSevere }}</li>
-                    <li>Death Case: {{ Hospital.confinedDied }}</li>
-                    <li>Discharged Patient:{{ Hospital.discharged }}</li>
-                  </ul>
-                </div>
-
-                <div class=" bg-black align-top ml-10 row-span-2 col-span-1 w-72">
-                  <img class="object-cover">
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-
         <div class="embed-container">
           <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
             title="COVID-19"
@@ -293,6 +231,48 @@
                 online.</a>
             </li>
           </ul>
+        </div>
+        <div>
+          <div>
+            <div class="relative overflow-x-auto shadow-md ">
+              <table class="w-full text-sm text-left text-gray-500 ">
+                <thead class=" my-5 border-b border-t border-black text-black uppercase bg-gray-50 ">
+                  <tr>
+                    <th scope="col" class="px-6 pt-3">
+                      <h1>Digos City Facility Status</h1>
+                    </th>
+                    <th scope="col" class="pt-3">
+                      <h1>Confined Status</h1>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody v-for="Hospital in this.HospitalInformationObjects">
+                  <tr class="border-b border-black bg-white">
+                    <th scope="row" class=" text-xl pl-6 text-black ">
+                      {{ Hospital.name }}
+                    </th>
+                    <td>
+                      <ul class="py-3 text-ellipsis text-justify font-medium text-black ">
+                        <li>Asymptomatic Case: {{ Hospital.confinedAsymptomatic }}</li>
+                        <li>Mild Case: {{ Hospital.confinedMild }}</li>
+                        <li>Severe Case: {{ Hospital.confinedSevere }}</li>
+                        <li>Death Case: {{ Hospital.confinedDied }}</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="text-xs mx-10 pt-5">
+                <span>Note that the data depends on the COVID-19 Data Drop provided by the Department of Health.
+                  Therefore, it is
+                  highly possible that the data that is currently displayed may be outdated since it may depend on the
+                  respective hospitals if
+                  they
+                  had passed their facility data to the DOH Data Drop, DOH Data Drop is updated, or in the COVID-19 API
+                  used</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
