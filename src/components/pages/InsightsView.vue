@@ -3,7 +3,7 @@
     <div class="relative flex flex-wrap items-center justify-between my-0 pt-5 bg-white text-black">
       <div class="container flex-wrap mx-auto px-32 items-center">
         <!-- Headline -->
-        <div class="mb-7 border-4 border-black">
+        <div class="mb-7">
           <div class="py-5 pt-20 my-b ">
             <h2 class=" my-2  text-black font-sans font-extrabold text-7xl">COVID-19 Insights</h2>
             <p class=" text-black pt-2 font-sans tracking-normal text-2xl">Get the

@@ -12,16 +12,16 @@ export default {
   async created() {
     await axios({
       method: 'get',
-      url: 'https://api.covid19api.com/country/philippines/status/confirmed',
+      url: 'https://api.covid19api.com/country/philippines',
       headers: {}
     }).then(response => {
       // Selecting the last element of the COVID-19 API response 
       // This is to get the latest data of Philippine COVID-19 information
       let latestCovidInfo = response.data[response.data.length - 1];
-      this.WeeklyCases = ((response.data[response.data.length - 1].Cases) - (response.data[response.data.length - 7].Cases)).toLocaleString('en-US');
-      this.NowCases = latestCovidInfo.Cases.toLocaleString('en-US')
+      this.WeeklyCases = ((response.data[response.data.length - 1].Confirmed) - (response.data[response.data.length - 7].Confirmed)).toLocaleString('en-US');
+      this.NowCases = latestCovidInfo.Confirmed.toLocaleString('en-US')
       this.nowUpdatedDate = dayjs(latestCovidInfo.Date).format('dddd, MMMM D, YYYY')
-      console.log(this.nowUpdatedDate);
+      console.log(latestCovidInfo);
     }).catch((err) => console.log(err));
   },
 }
@@ -51,11 +51,19 @@ import TheLineSummaryCovidDashboardVue from '../../dashboard-charts/main-summary
       <div class="pt-5">
         <div class=" flex flex-col gap-3">
           <div class="flex flex-row gap-2">
-            <h1 class=" font-extrabold text-2xl">COVID-19 Cases Last 7 days:</h1>
+            <h1 class=" font-extrabold text-2xl">Weekly Cases:</h1>
             <span class=" text-2xl">{{ WeeklyCases }}</span>
           </div>
           <div class="flex flex-row gap-2">
-            <h1 class=" font-extrabold text-2xl">Total COVID-19 Cases:</h1>
+            <h1 class=" font-extrabold text-2xl">Total Cases:</h1>
+            <h1 class=" text-2xl">{{ NowCases }}</h1>
+          </div>
+          <div class="flex flex-row gap-2">
+            <h1 class=" font-extrabold text-2xl">Deaths:</h1>
+            <h1 class=" text-2xl">{{ NowCases }}</h1>
+          </div>
+          <div class="flex flex-row gap-2">
+            <h1 class=" font-extrabold text-2xl">Recoveries:</h1>
             <h1 class=" text-2xl">{{ NowCases }}</h1>
           </div>
         </div>
