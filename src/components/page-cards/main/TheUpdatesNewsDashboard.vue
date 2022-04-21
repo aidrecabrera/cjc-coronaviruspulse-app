@@ -102,8 +102,6 @@ export default {
       dayjs.extend(relativeTime);
       let dateParsedList = dayjs(dateParsingList).fromNow('h');
       this.ListArticleJSON.published_date = dateParsedList;
-      console.log(dateParsedList);
-      console.log(this.ListArticleJSON.published_date);
       this.ListArticleJSON.splice(0, 1);
       console.log(this.ListArticleJSON);
     })

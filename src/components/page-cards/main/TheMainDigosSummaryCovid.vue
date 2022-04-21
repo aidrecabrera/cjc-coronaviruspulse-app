@@ -67,6 +67,11 @@ export default {
           </div>
         </div>
       </div>
+      <div>
+        <iframe width="600" height="800"
+          src="https://datastudio.google.com/embed/reporting/edb87ce6-9371-441e-ac13-4ccc81e70fdb/page/1M"
+          frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
     </div>
   </main>
 </template>

@@ -15,6 +15,11 @@
           </div>
         </div>
 
+        <div class=" embed-container">
+          <iframe
+            src="https://app.powerbi.com/view?r=eyJrIjoiZjY1MzYxNmYtNTQ3OC00NzI5LWIyMDEtYjI3MzVjYjI2NTUzIiwidCI6IjE5NWQzN2JlLTllMGEtNDIwNS1hZGY0LWEyNTk5ZTllMWNjYSIsImMiOjEwfQ%3D%3D"
+            frameborder="0"></iframe>
+        </div>
         <div class="embed-container">
           <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
             title="COVID-19"
@@ -236,23 +241,23 @@
           <div>
             <div class="relative overflow-x-auto shadow-md ">
               <table class="w-full text-sm text-left text-gray-500 ">
-                <thead class=" my-5 border-b border-t border-black text-black uppercase bg-gray-50 ">
+                <thead class=" my-5 border-b border-t border-black text-white uppercase bg-red tracking-wide ">
                   <tr>
                     <th scope="col" class="px-6 pt-3">
-                      <h1>Digos City Facility Status</h1>
+                      <h1>Hospital Name</h1>
                     </th>
                     <th scope="col" class="pt-3">
-                      <h1>Confined Status</h1>
+                      <h1>Facility Status</h1>
                     </th>
                   </tr>
                 </thead>
                 <tbody v-for="Hospital in this.HospitalInformationObjects">
-                  <tr class="border-b border-black bg-white">
-                    <th scope="row" class=" text-xl pl-6 text-black ">
+                  <tr class="border-b border-black bg-white hover:bg-slate-300 duration-300 ease-in-out">
+                    <th scope="row" class=" text-xl pl-6 text-black font-bold">
                       {{ Hospital.name }}
                     </th>
                     <td>
-                      <ul class="py-3 text-ellipsis text-justify font-medium text-black ">
+                      <ul class="py-3 text-ellipsis text-justify font-medium text-black">
                         <li>Asymptomatic Case: {{ Hospital.confinedAsymptomatic }}</li>
                         <li>Mild Case: {{ Hospital.confinedMild }}</li>
                         <li>Severe Case: {{ Hospital.confinedSevere }}</li>
@@ -324,6 +329,7 @@ export default {
     })
   }
 }
+
 </script>
 
 <style scoped>
