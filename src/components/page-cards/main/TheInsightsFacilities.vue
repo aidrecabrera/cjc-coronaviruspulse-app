@@ -20,6 +20,10 @@ await axios({
   }
 }).then(response => {
   let HospitalArray = response.data.data
+  console.log(HospitalArray);
+  let DigosListStatus = []
+  DigosListStatus.push(HospitalArray[302], HospitalArray[318], HospitalArray[338], HospitalArray[473], HospitalArray[730], HospitalArray[1162])
+  console.log(DigosListStatus);
   let DigosListNames = []
   DigosListNames.push(HospitalArray[302].cf_name, HospitalArray[318].cf_name, HospitalArray[338].cf_name, HospitalArray[473].cf_name, HospitalArray[730].cf_name, HospitalArray[1162].cf_name)
   DigosListNames = DigosListNames.map(temp => titleCase(temp));
@@ -30,6 +34,18 @@ await axios({
     let hospitalInformation = {}
     hospitalInformation.id = index
     hospitalInformation.name = DigosListNames[index]
+    hospitalInformation.confinedAsymptomatic = DigosListNames
+    hospitalInformation.confinedDied = DigosListNames
+    hospitalInformation.confinedSevere = DigosListNames
+    hospitalInformation.discharged = DigosListNames
+    hospitalInformation.confinedMild = DigosListNames
+
+    conf_asym: 0
+conf_crit: 0
+conf_died: 0
+conf_mild: 6
+conf_severe: 0
+discharged: 0
     return hospitalInformation
   })
   console.log(CompleteDigosHospitalInformation);
