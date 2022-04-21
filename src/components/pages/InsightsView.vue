@@ -121,7 +121,7 @@
               country
               case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be
               corrected at more frequent intervals.</p>
-            <p>New case and death counts: Counts of new cases and deaths are calculated by subtracting previous
+            <p><b>New case and death counts:</b> Counts of new cases and deaths are calculated by subtracting previous
               cumulative
               total counts from the current count. These counts are updated incrementally throughout the day as more
               information becomes available. Daily new case and death counts are complete by 23:59 CET/CEST each day.
@@ -138,14 +138,16 @@
               days,
               data will be updated accordingly.</p>
             <p>
-              Current day counts, global epidemic curves and trends: Due to the incremental updates to the dashboard,
+              <b>Current day counts, global epidemic curves and trends:</b> Due to the incremental updates to the
+              dashboard,
               global
               case and death counts visualized for the current day may reflect partial data until counts have been fully
               updated for all regions that day. This must be taken into consideration when interpreting global epidemic
               curves and trends.
             </p>
             <p>
-              Time stamps and updates: Time/date stamps reflect when the data was last updated by WHO. Due to the time
+              <b>Time stamps and updates:</b> Time/date stamps reflect when the data was last updated by WHO. Due to the
+              time
               required to process and validate the incoming data, there is a delay between reporting to WHO and the
               update
               of the dashboard. To account for different time zones across WHO Regions and data transmission methods,
@@ -161,17 +163,12 @@
               reflect
               trends. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.
             </p>
+            <p><b>Other:</b> cases and deaths reported from international conveyances, included in global totals but not
+              reflected
+              in epidemiological curves as not associated with a country or region.</p>
+            <p><b>Rates:</b> &lt;0.001 per 100,000 population may be rounded to 0.</p>
           </div>
 
-          <p>
-
-
-
-
-            Other: cases and deaths reported from international conveyances, included in global totals but not reflected
-            in epidemiological curves as not associated with a country or region.
-
-            Rates: &lt;0.001 per 100,000 population may be rounded to 0.</p>
         </div>
         <div>
           <h1>Vaccination data</h1>
@@ -251,15 +248,15 @@ h1 {
 }
 
 h3 {
-  @apply font-bold;
+  @apply font-bold mb-2;
 }
 
 p {
-  @apply text-justify mb-3;
+  @apply text-justify mb-3 text-xs leading-relaxed;
 }
 
 a {
-  @apply text-slate-500 font-bold no-underline hover: underline ease-in-out duration-1000;
+  @apply text-slate-500 font-bold no-underline hover:underline ease-in-out duration-1000;
 }
 
 div {
