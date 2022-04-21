@@ -1,14 +1,17 @@
 <template>
-  <main class="bg-red">
+  <main class=" bg-white">
     <div class="relative flex flex-wrap items-center justify-between  text-black">
-      <div class="container flex-wrap mx-72 px-11 pb-32 items-center bg-white">
+      <div class="container flex-wrap mx-72 px-11 pb-32 items-center">
         <!-- Headline -->
         <div class="mb-7">
-          <div class="py-5 pt-20 my-b ">
+          <div class="py-1 pt-20">
             <h2 class=" my-2  text-black font-sans font-extrabold text-7xl">COVID-19 Insights</h2>
-            <span class=" text-black pt-2 font-sans tracking-normal text-2xl">Get the
+            <span class=" text-black py-2 font-sans tracking-normal text-2xl">Get the
               latest COVID-19 epidemiological insights from various organizations.
             </span>
+          </div>
+          <div class="">
+            <hr class="bg-black h-0.5">
           </div>
         </div>
 
@@ -253,7 +256,7 @@ p {
 }
 
 a {
-  @apply text-slate-500 font-bold no-underline hover:underline ease-in-out duration-1000;
+  /* @apply text-slate-500 font-bold no-underline hover:underline ease-in-out duration-1000; */
 }
 
 div {
