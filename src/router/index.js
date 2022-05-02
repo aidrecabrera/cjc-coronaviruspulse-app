@@ -1,3 +1,4 @@
+/* Importing the router and the views. */
 import { createRouter, createWebHistory } from 'vue-router'
 import home from '../views/TheHomeView.vue'
 import covidinsights from '../views/TheInsightsView.vue'
@@ -5,6 +6,7 @@ import covidhealth from '../views/TheHealthWellbeingView.vue'
 import covidupdates from '../views/TheUpdatesView.vue'
 import about from '../views/TheAboutsView.vue'
 
+/* Creating a router object. */
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [{
@@ -53,6 +55,7 @@ const router = createRouter({
   ]
 })
 
+/* A router guard that is called before each route change. */
 router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title}`
   next();
