@@ -1,3 +1,4 @@
+/* This is adding the default font family to the tailwind config. */
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 const fontFamily = defaultTheme.fontFamily;
@@ -6,13 +7,17 @@ fontFamily['sans'] = [
   'system-ui',
   // <-- you may provide more font fallbacks here
 ];
+/* This is the tailwind config file. */
 module.exports = {
+  /* This is telling tailwind to watch the index.html and all the files in the src folder. */
   mode: 'jit',
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
+  /* Adding custom spacing, border radius, and colors to the tailwind config. */
   theme: {
+    /* The above code is setting the font family for the website. */
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
       serif: ['Playfair Display', 'serif'],
@@ -24,6 +29,7 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
+    /* Adding custom spacing, border radius, and colors to the tailwind config. */
     extend: {
       spacing: {
         '128': '32rem',

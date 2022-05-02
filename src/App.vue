@@ -101,16 +101,18 @@ export default {
 		</div>
 		<RouterView />
 	</main>
-	// The footer of the COVID Pulse.
+	<!-- The footer of the COVID Pulse. -->
 	<footer>
 		<div class="mt-12 mb-16">
 			<div class="flex justify-evenly items-baseline w-full">
+				<!-- A copyright notice. -->
 				<div class="item">
 					© 2022 Aidre Cabrera, COVID Pulse, and Cor Jesu College, Inc.
 				</div>
 				<div class="item">
 					<img src="/footer-logo.png" alt="" class="" />
 				</div>
+				<!-- A flexbox that is used to display the social media links of COVID Pulse. -->
 				<div class="item">
 					<div class="flex justify-evenly items-center w-auto space-x-10">
 						<div class="item">Facebook</div>
