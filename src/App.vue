@@ -7,6 +7,7 @@ import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <script>
+// A Vue component that is used to toggle the navbar.
 export default {
 	name: 'purple-navbar',
 	data() {
@@ -23,6 +24,7 @@ export default {
 </script>
 
 <template>
+	// The navbar of COVID Pulse.
 	<header>
 		<div>
 			<nav class="flex items-center justify-between py-8 bg-red">
@@ -99,6 +101,7 @@ export default {
 		</div>
 		<RouterView />
 	</main>
+	// The footer of the COVID Pulse.
 	<footer>
 		<div class="mt-12 mb-16">
 			<div class="flex justify-evenly items-baseline w-full">
