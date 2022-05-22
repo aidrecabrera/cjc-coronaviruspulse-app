@@ -15,11 +15,6 @@
           </div>
         </div>
 
-        <div class=" embed-container">
-          <iframe
-            src="https://app.powerbi.com/view?r=eyJrIjoiZjY1MzYxNmYtNTQ3OC00NzI5LWIyMDEtYjI3MzVjYjI2NTUzIiwidCI6IjE5NWQzN2JlLTllMGEtNDIwNS1hZGY0LWEyNTk5ZTllMWNjYSIsImMiOjEwfQ%3D%3D"
-            frameborder="0"></iframe>
-        </div>
         <div class="embed-container">
           <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
             title="COVID-19"
@@ -39,6 +34,53 @@
             src="https://app.powerbi.com/view?r=eyJrIjoiYWRiZWVkNWUtNmM0Ni00MDAwLTljYWMtN2EwNTM3YjQzYmRmIiwidCI6ImY2MTBjMGI3LWJkMjQtNGIzOS04MTBiLTNkYzI4MGFmYjU5MCIsImMiOjh9"
             frameborder="0">
           </iframe>
+          <div class=" embed-container">
+          <iframe
+            src="https://app.powerbi.com/view?r=eyJrIjoiZjY1MzYxNmYtNTQ3OC00NzI5LWIyMDEtYjI3MzVjYjI2NTUzIiwidCI6IjE5NWQzN2JlLTllMGEtNDIwNS1hZGY0LWEyNTk5ZTllMWNjYSIsImMiOjEwfQ%3D%3D"
+            frameborder="0"></iframe>
+        </div>
+        </div>
+        <div class="pb-5 border-b-slate-900">
+          <div>
+            <div class="relative overflow-x-auto shadow-md ">
+              <table class="w-full text-sm text-left text-gray-500 ">
+                <thead class=" my-5 border-b border-t border-black text-white uppercase bg-red tracking-wide ">
+                  <tr>
+                    <th scope="col" class="px-6 pt-3">
+                      <h1>Hospital Name</h1>
+                    </th>
+                    <th scope="col" class="pt-3">
+                      <h1>Facility Status</h1>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody v-for="Hospital in this.HospitalInformationObjects">
+                  <tr class="border-b border-black bg-white hover:bg-slate-300 duration-300 ease-in-out">
+                    <th scope="row" class=" text-xl pl-6 text-black font-bold">
+                      {{ Hospital.name }}
+                    </th>
+                    <td>
+                      <ul class="py-3 text-ellipsis text-justify font-medium text-black">
+                        <li>Asymptomatic Case: {{ Hospital.confinedAsymptomatic }}</li>
+                        <li>Mild Case: {{ Hospital.confinedMild }}</li>
+                        <li>Severe Case: {{ Hospital.confinedSevere }}</li>
+                        <li>Death Case: {{ Hospital.confinedDied }}</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="text-xs mx-10 pt-5">
+                <span>Note that the data depends on the COVID-19 Data Drop provided by the Department of Health.
+                  Therefore, it is
+                  highly possible that the data that is currently displayed may be outdated since it may depend on the
+                  respective hospitals if
+                  they
+                  had passed their facility data to the DOH Data Drop, DOH Data Drop is updated, or in the COVID-19 API
+                  used</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
           <h1>
@@ -236,48 +278,6 @@
                 online.</a>
             </li>
           </ul>
-        </div>
-        <div>
-          <div>
-            <div class="relative overflow-x-auto shadow-md ">
-              <table class="w-full text-sm text-left text-gray-500 ">
-                <thead class=" my-5 border-b border-t border-black text-white uppercase bg-red tracking-wide ">
-                  <tr>
-                    <th scope="col" class="px-6 pt-3">
-                      <h1>Hospital Name</h1>
-                    </th>
-                    <th scope="col" class="pt-3">
-                      <h1>Facility Status</h1>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody v-for="Hospital in this.HospitalInformationObjects">
-                  <tr class="border-b border-black bg-white hover:bg-slate-300 duration-300 ease-in-out">
-                    <th scope="row" class=" text-xl pl-6 text-black font-bold">
-                      {{ Hospital.name }}
-                    </th>
-                    <td>
-                      <ul class="py-3 text-ellipsis text-justify font-medium text-black">
-                        <li>Asymptomatic Case: {{ Hospital.confinedAsymptomatic }}</li>
-                        <li>Mild Case: {{ Hospital.confinedMild }}</li>
-                        <li>Severe Case: {{ Hospital.confinedSevere }}</li>
-                        <li>Death Case: {{ Hospital.confinedDied }}</li>
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="text-xs mx-10 pt-5">
-                <span>Note that the data depends on the COVID-19 Data Drop provided by the Department of Health.
-                  Therefore, it is
-                  highly possible that the data that is currently displayed may be outdated since it may depend on the
-                  respective hospitals if
-                  they
-                  had passed their facility data to the DOH Data Drop, DOH Data Drop is updated, or in the COVID-19 API
-                  used</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

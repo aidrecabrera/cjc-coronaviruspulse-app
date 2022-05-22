@@ -11,7 +11,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [{
      redirect: '/home'
-    },
+    }, 
     {
       path: '/home',
       name: 'Home',
