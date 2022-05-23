@@ -14,7 +14,6 @@
             <hr class="bg-black h-0.5">
           </div>
         </div>
-
         <div class="embed-container">
           <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
             title="COVID-19"
@@ -329,7 +328,6 @@ export default {
     })
   }
 }
-
 </script>
 
 <style scoped>
