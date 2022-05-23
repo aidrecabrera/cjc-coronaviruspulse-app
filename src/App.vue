@@ -24,7 +24,6 @@ export default {
 </script>
 
 <template>
-	// The navbar of COVID Pulse.
 	<header>
 		<div>
 			<nav class="flex items-center justify-between py-8 bg-red">

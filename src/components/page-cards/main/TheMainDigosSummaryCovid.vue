@@ -7,7 +7,7 @@ export default {
       NowCases: '',
       NowDeaths: '',
       NowRecovered: '',
-      nowUpdatedDate: '',
+      nowUpdatedDate: 'May 22, 2022',
     }
   },
   async created() {
@@ -48,25 +48,19 @@ export default {
         </p>
       </div>
       <div class="pt-2">
-        <div class=" pb-5">
-          <p>As of <b>{{ nowUpdatedDate }}</b>, there have been <b>{{ NowCases }}</b> confirmed cases of COVID-19,
+        <div class="">
+          <p>Globally, there have been <b>{{ NowCases }}</b> confirmed cases of COVID-19,
             including <b>{{ NowDeaths }}</b> deaths, reported by the Department of Health.</p>
         </div>
-        <div class=" flex flex-col gap-3">
-          <div class="flex flex-row gap-2">
-            <h1 class=" font-extrabold text-2xl">Total Cases:</h1>
-            <h1 class=" text-2xl">{{ NowCases }}</h1>
-          </div>
-          <div class="flex flex-row gap-2">
-            <h1 class=" font-extrabold text-2xl">Total Deaths:</h1>
-            <h1 class=" text-2xl">{{ NowDeaths }}</h1>
-          </div>
-          <div class="flex flex-row gap-2">
-            <h1 class=" font-extrabold text-2xl">Total Recoveries:</h1>
-            <h1 class=" text-2xl">{{ NowCases }}</h1>
-          </div>
-        </div>
+        
+        <div class="py-5">
+        <img src="https://svgshare.com/i/hao.svg" alt />
       </div>
+
+      </div>
+    </div>
+    <div>
+      
     </div>
   </main>
 </template>
